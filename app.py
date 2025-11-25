@@ -9,8 +9,8 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 from fpl_app import config
 
 st.set_page_config(
-    page_title="FPL_TERM",
-    page_icon="█",
+    page_title="FPL Transfer Predictor",
+    page_icon="⚽",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -18,8 +18,8 @@ st.set_page_config(
 # --- 2. STYLES ---
 st.markdown("""
 <style>
-    :root { --bg-color: #F3F4F6; --text-color: #111827; --accent-good: #059669; --accent-bad: #DC2626; --accent-info: #2563EB; --border-color: #000000; }
-    .stApp { background-color: var(--bg-color) !important; font-family: 'Courier New', Courier, monospace !important; }
+    :root { --bg-color: #F3F4F6; --text-color: #111827; --accent-good: #059669; --accent-bad: #DC2626; --accent-info: #2563EB; --border-color: #dee2e6; }
+    .stApp { background-color: var(--bg-color) !important; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important; }
     * { color: var(--text-color) !important; font-family: 'Courier New', Courier, monospace !important; letter-spacing: -0.5px; }
     .good { color: var(--accent-good) !important; font-weight: bold; }
     .bad { color: var(--accent-bad) !important; font-weight: bold; }
@@ -44,21 +44,79 @@ st.markdown("""
         transform: scale(1.02);
     }
     
-    /* PITCH VIZ */
+    /* PITCH VIZ - Cleaner, more subtle */
     div[data-testid="stVerticalBlockBorderWrapper"] {
-        background-color: #458B55;
-        background-image: linear-gradient(0deg, transparent 24%, rgba(255,255,255,.1) 25%, rgba(255,255,255,.1) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.1) 75%, rgba(255,255,255,.1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255,255,255,.1) 25%, rgba(255,255,255,.1) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.1) 75%, rgba(255,255,255,.1) 76%, transparent 77%, transparent);
+        background-color: #3d7a4f;
+        background-image: linear-gradient(0deg, transparent 24%, rgba(255,255,255,.05) 25%, rgba(255,255,255,.05) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.05) 75%, rgba(255,255,255,.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255,255,255,.05) 25%, rgba(255,255,255,.05) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.05) 75%, rgba(255,255,255,.05) 76%, transparent 77%, transparent);
         background-size: 50px 50px;
-        border: 5px solid #fff !important;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+        border: 3px solid rgba(255,255,255,0.3) !important;
+        border-radius: 8px;
+        padding: 25px 15px;
+        box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
     }
-    .stButton button { background-color: rgba(255,255,255,0.95) !important; border: 2px solid #111 !important; color: #111 !important; border-radius: 5px !important; font-weight: 900 !important; padding: 8px 4px !important; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-    div[data-testid="stPopoverBody"] { border: 3px solid #000; background: #fff; }
-    div[data-testid="stDataFrame"] { border: 2px solid #000; }
+    
+    /* Player buttons - cleaner, more subtle with position colors */
+    .stButton button { 
+        background-color: rgba(255,255,255,0.92) !important; 
+        border: 1.5px solid rgba(0,0,0,0.15) !important; 
+        border-left: 3px solid rgba(0,0,0,0.15) !important;
+        color: #111 !important; 
+        border-radius: 6px !important; 
+        font-weight: 700 !important; 
+        font-size: 0.85rem !important;
+        padding: 10px 6px !important; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: all 0.2s ease;
+        line-height: 1.3 !important;
+    }
+    .stButton button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        border-color: rgba(0,0,0,0.25) !important;
+    }
+    
+    /* Position-specific colors for player cards */
+    .player-gk { border-left-color: #FFD700 !important; background: linear-gradient(to right, rgba(255,215,0,0.08), rgba(255,255,255,0.92)) !important; }
+    .player-def { border-left-color: #4169E1 !important; background: linear-gradient(to right, rgba(65,105,225,0.08), rgba(255,255,255,0.92)) !important; }
+    .player-mid { border-left-color: #32CD32 !important; background: linear-gradient(to right, rgba(50,205,50,0.08), rgba(255,255,255,0.92)) !important; }
+    .player-fwd { border-left-color: #DC143C !important; background: linear-gradient(to right, rgba(220,20,60,0.08), rgba(255,255,255,0.92)) !important; }
+    
+    /* Transfer suggestions - cleaner styling */
+    .stButton button[kind="secondary"] {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+        border: 1px solid #dee2e6 !important;
+    }
+    .stButton button[kind="primary"] {
+        background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%) !important;
+        border: 1px solid #B8860B !important;
+        box-shadow: 0 2px 6px rgba(255, 215, 0, 0.3);
+    }
+    
+    div[data-testid="stPopoverBody"] { border: 2px solid #dee2e6; background: #fff; border-radius: 8px; }
+    div[data-testid="stDataFrame"] { border: 1px solid #dee2e6; border-radius: 4px; }
     .box { border: 2px solid var(--border-color); background: #FFFFFF; padding: 15px; margin-bottom: 15px; box-shadow: 4px 4px 0px rgba(0,0,0,0.1); }
-    .title-box { border: 3px solid var(--border-color); padding: 20px; background: #FFFFFF; text-align: center; margin-bottom: 30px; box-shadow: 6px 6px 0px rgba(0,0,0,0.2); }
+    .title-box { border: 1px solid #dee2e6; padding: 25px; background: #FFFFFF; text-align: center; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    
+    /* Transfer card styling with position colors */
+    .transfer-card {
+        background: white;
+        border-left: 4px solid #e9ecef;
+        border-top: 1px solid #e9ecef;
+        border-right: 1px solid #e9ecef;
+        border-bottom: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        transition: all 0.2s ease;
+    }
+    .transfer-card:hover {
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .transfer-card-gk { border-left-color: #FFD700; background: linear-gradient(to right, rgba(255,215,0,0.03), white); }
+    .transfer-card-def { border-left-color: #4169E1; background: linear-gradient(to right, rgba(65,105,225,0.03), white); }
+    .transfer-card-mid { border-left-color: #32CD32; background: linear-gradient(to right, rgba(50,205,50,0.03), white); }
+    .transfer-card-fwd { border-left-color: #DC143C; background: linear-gradient(to right, rgba(220,20,60,0.03), white); }
 </style>
 """, unsafe_allow_html=True)
 
@@ -143,9 +201,33 @@ def get_user_details(uid):
         return r.json() if r.status_code == 200 else None
     except: return None
 
-def get_global_transfer_suggestions(squad, pred_df, bank=0):
+def get_global_transfer_suggestions(squad, pred_df, fpl_stats, bank=0, ownership_mode='ALL'):
+    """
+    ownership_mode: 'ALL', 'TEMPLATE' (>10%), or 'DIFFERENTIAL' (<10%)
+    """
     suggestions = []
-    available_players = pred_df[~pred_df['id'].isin(squad['id'])]
+    available_players = pred_df[~pred_df['id'].isin(squad['id'])].copy()
+    
+    # Filter by ownership if needed
+    if ownership_mode != 'ALL':
+        # Get latest ownership data
+        latest_ownership = fpl_stats.groupby('element')['selected'].last().to_dict()
+        available_players['ownership_pct'] = available_players['id'].map(latest_ownership).fillna(0)
+        
+        # Get total players from bootstrap
+        try:
+            boot = requests.get(f"{config.FPL_BASE_URL}/bootstrap-static/").json()
+            total_players = boot.get('total_players', 12000000)
+        except:
+            total_players = 12000000
+            
+        available_players['ownership_pct'] = (available_players['ownership_pct'] / total_players) * 100
+        
+        if ownership_mode == 'TEMPLATE':
+            available_players = available_players[available_players['ownership_pct'] >= 10]
+        elif ownership_mode == 'DIFFERENTIAL':
+            available_players = available_players[available_players['ownership_pct'] < 10]
+    
     targets_by_pos = {
         1: available_players[available_players['element_type'] == 1],
         2: available_players[available_players['element_type'] == 2],
@@ -319,14 +401,21 @@ def render_pitch_grid(starters, bench, fix_map, fpl_stats, api_stats, prefix, hi
                 with cols[i]:
                     is_new = (p.id == highlight_id)
                     
+                    # Position class for color coding
+                    pos_class_map = {1: 'player-gk', 2: 'player-def', 3: 'player-mid', 4: 'player-fwd'}
+                    pos_class = pos_class_map.get(p.element_type, 'player-mid')
+                    
                     # Button Label (Clean, no emojis)
                     label = f"{p.web_name}\n{p.xp:.1f}"
                     
                     # Button Styling via Type
                     btn_type = "primary" if is_new else "secondary"
                     
+                    # Wrap in div with position class
+                    st.markdown(f'<div class="{pos_class}">', unsafe_allow_html=True)
                     if st.button(label, key=f"{prefix}_{r_idx}_{i}", type=btn_type, use_container_width=True):
                         show_player_card(p._asdict(), fix_map, fpl_stats, api_stats, boot, is_new)
+                    st.markdown('</div>', unsafe_allow_html=True)
             
             if r_idx < 3: 
                 st.write("")
@@ -338,14 +427,22 @@ def render_pitch_grid(starters, bench, fix_map, fpl_stats, api_stats, prefix, hi
         for i, p in enumerate(bench.itertuples()):
             with b_cols[i]:
                 is_new = (p.id == highlight_id)
+                
+                # Position class for color coding
+                pos_class_map = {1: 'player-gk', 2: 'player-def', 3: 'player-mid', 4: 'player-fwd'}
+                pos_class = pos_class_map.get(p.element_type, 'player-mid')
+                
                 label = f"{p.web_name}\n{p.xp:.1f}"
                 btn_type = "primary" if is_new else "secondary"
                 
+                # Wrap in div with position class
+                st.markdown(f'<div class="{pos_class}">', unsafe_allow_html=True)
                 if st.button(label, key=f"{prefix}_bench_{i}", type=btn_type, use_container_width=True):
                     show_player_card(p._asdict(), fix_map, fpl_stats, api_stats, boot, is_new)
+                st.markdown('</div>', unsafe_allow_html=True)
 
 # --- MAIN ---
-st.markdown('<div class="title-box"><h1>FPL_ANALYST // V5.0</h1><a href="http://localhost:8501">[ RAW DATA TERMINAL ]</a></div>', unsafe_allow_html=True)
+st.markdown('<div class="title-box"><h2 style="font-weight: 400; color: #374151; margin: 0;">FPL Transfer Predictor</h2><p style="color: #6b7280; font-size: 0.9rem; margin-top: 8px;">AI-Powered Squad Analysis & Transfer Recommendations</p></div>', unsafe_allow_html=True)
 pred_df, boot, fix_map, fpl_stats, api_stats = load_data()
 
 if 'user_squad' not in st.session_state: st.session_state.user_squad = None
@@ -421,7 +518,14 @@ with tab_team:
         # 5. Transfer Suggestions (Interactive Bars)
         st.markdown("### ALGORITHMIC TRANSFER PROTOCOL")
         
-        suggestions = get_global_transfer_suggestions(st.session_state.user_squad, pred_df, st.session_state.bank)
+        # Ownership Mode Toggle
+        ownership_mode = st.pills("Transfer Strategy", ["ALL", "TEMPLATE", "DIFFERENTIAL"], default="ALL", key="ownership_mode")
+        if ownership_mode == "TEMPLATE":
+            st.caption("🎯 Showing only high-ownership players (≥10% selected)")
+        elif ownership_mode == "DIFFERENTIAL":
+            st.caption("💎 Showing only low-ownership differentials (<10% selected)")
+        
+        suggestions = get_global_transfer_suggestions(st.session_state.user_squad, pred_df, fpl_stats, st.session_state.bank, ownership_mode)
         
         if not suggestions.empty:
             for i, row in suggestions.iterrows():
@@ -437,21 +541,30 @@ with tab_team:
                 out_p = st.session_state.user_squad[st.session_state.user_squad['id'] == row['out_id']].iloc[0]
                 cost_diff = out_p['cost'] - row['in_cost']
                 
-                # Label logic
-                label = f"OUT: {row['out_name']}   ➔   IN: {row['in_name']}   (+{row['gain']:.1f} XP)"
+                # Get position for color coding
+                pos_class_map = {1: 'gk', 2: 'def', 3: 'mid', 4: 'fwd'}
+                pos_class = pos_class_map.get(in_player_row['element_type'], 'mid')
                 
-                # Button Type
-                btn_type = "primary" if is_active else "secondary"
-                
-                # Callback
-                if st.button(label, key=f"tx_bar_{i}", type=btn_type, use_container_width=True,
-                             on_click=set_transfer,
-                             args=(row['out_id'], in_player_row, cost_diff)):
-                    pass
-                
-                # Display confidence and reasoning below the button
-                st.caption(f"**{row['confidence']}% Confidence** — {row['reason']}")
-                st.write("")  # Spacer
+                # Card container for each transfer with position color
+                with st.container():
+                    st.markdown(f'<div class="transfer-card transfer-card-{pos_class}">', unsafe_allow_html=True)
+                    
+                    # Cleaner label with better formatting
+                    label = f"{row['out_name']} → {row['in_name']} (+{row['gain']:.1f} xP)"
+                    
+                    # Button Type
+                    btn_type = "primary" if is_active else "secondary"
+                    
+                    # Callback
+                    if st.button(label, key=f"tx_bar_{i}", type=btn_type, use_container_width=True,
+                                 on_click=set_transfer,
+                                 args=(row['out_id'], in_player_row, cost_diff)):
+                        pass
+                    
+                    # Display confidence and reasoning below with cleaner styling
+                    st.caption(f"**{row['confidence']}%** confidence · {row['reason']}")
+                    
+                    st.markdown('</div>', unsafe_allow_html=True)
                     
         else:
             st.info("NO SIGNIFICANT UPGRADES FOUND")
@@ -462,6 +575,124 @@ with tab_team:
         market['cost'] = market['cost'] / 10.0
         market['Owned'] = market['id'].isin(current_squad['id']).map({True: '✅', False: ''})
         st.dataframe(market[['Owned', 'web_name', 'team_name', 'element_type', 'cost', 'xp']], use_container_width=True, hide_index=True)
+        
+        # 7. Form vs Fixtures Analyzer
+        st.markdown("### 📊 FORM VS FIXTURES ANALYZER")
+        st.caption("Spot players with good form AND easy fixtures (top-right = ideal)")
+        
+        # Calculate form (last 5 avg points)
+        form_data = fpl_stats.groupby('element').apply(
+            lambda x: x.sort_values('round').tail(5)['total_points'].mean()
+        ).reset_index()
+        form_data.columns = ['element', 'form']
+        
+        # Get next fixture difficulty
+        fixture_diff = []
+        for _, p in pred_df.iterrows():
+            fix = fix_map.get(p['team'], {})
+            fixture_diff.append({'element': p['id'], 'difficulty': fix.get('diff', 3)})
+        fixture_df = pd.DataFrame(fixture_diff)
+        
+        # Merge
+        viz_df = pred_df[['id', 'web_name', 'team_name', 'element_type', 'cost']].copy()
+        viz_df = viz_df.merge(form_data, left_on='id', right_on='element', how='left')
+        viz_df = viz_df.merge(fixture_df, left_on='id', right_on='element', how='left')
+        viz_df = viz_df.dropna(subset=['form', 'difficulty'])
+        viz_df['cost'] = viz_df['cost'] / 10
+        
+        # Filter to top 30 players by form to reduce clutter
+        viz_df = viz_df.nlargest(30, 'form')
+        
+        # Create scatter plot with jitter to prevent vertical stacking
+        import altair as alt
+        import numpy as np
+        
+        # Add MORE jitter to spread points out better
+        np.random.seed(42)  # For consistency
+        viz_df['difficulty_jitter'] = viz_df['difficulty'] + np.random.uniform(-0.35, 0.35, len(viz_df))
+        
+        pos_colors = {1: '#FFD700', 2: '#4169E1', 3: '#32CD32', 4: '#DC143C'}
+        pos_names = {1: 'Goalkeeper', 2: 'Defender', 3: 'Midfielder', 4: 'Forward'}
+        viz_df['color'] = viz_df['element_type'].map(pos_colors)
+        viz_df['position'] = viz_df['element_type'].map(pos_names)
+        
+        chart = alt.Chart(viz_df).mark_circle(size=100, opacity=0.7).encode(
+            x=alt.X('difficulty_jitter:Q', scale=alt.Scale(reverse=True, domain=[0.5, 5.5]), title='Fixture Difficulty (← Easier)', axis=alt.Axis(values=[1, 2, 3, 4, 5])),
+            y=alt.Y('form:Q', title='Form (Pts/G - Last 5)'),
+            color=alt.Color('position:N', scale=alt.Scale(domain=list(pos_names.values()), range=list(pos_colors.values())), legend=alt.Legend(title="Position")),
+            size=alt.Size('cost:Q', scale=alt.Scale(range=[50, 300]), legend=alt.Legend(title="Cost (£m)")),
+            tooltip=['web_name', 'team_name', 'position', 'form', 'difficulty', 'cost']
+        ).properties(height=400).interactive()
+        
+        st.altair_chart(chart, use_container_width=True)
+        
+        # 8. AI Model Explainer
+        st.markdown("### 🤖 AI BRAIN: PREDICTION EXPLAINER")
+        st.caption("See what features the model is using to make predictions (Z-scores show how extreme each stat is)")
+        
+        # Load full features for analysis
+        try:
+            from fpl_app.explainer import get_player_feature_importance
+            full_features = pd.read_csv(config.DATA_DIR / "full_features.csv")
+            
+            # Player selector
+            top_players = pred_df.nlargest(20, 'xp')[['id', 'web_name', 'xp']]
+            player_options = {f"{row['web_name']} ({row['xp']:.1f} xP)": row['id'] for _, row in top_players.iterrows()}
+            
+            selected_player_name = st.selectbox("Select Player to Analyze", list(player_options.keys()))
+            selected_player_id = player_options[selected_player_name]
+            
+            # Get player's position
+            player_pos = pred_df[pred_df['id'] == selected_player_id]['element_type'].iloc[0]
+            
+            # Get feature importance
+            importance = get_player_feature_importance(selected_player_id, player_pos, full_features)
+            
+            if importance:
+                # Create bar chart with user-friendly labels
+                feat_df = pd.DataFrame(importance, columns=['Feature', 'Z-Score'])
+                
+                # Map technical names to user-friendly, descriptive labels
+                label_map = {
+                    'minutes_rolling_5': 'Recent Playing Time (Avg Minutes)',
+                    'total_points_rolling_5': 'Recent Form (Avg FPL Points)',
+                    'expected_goals_rolling_5': 'Expected Goals (xG) - Recent',
+                    'expected_assists_rolling_5': 'Expected Assists (xA) - Recent',
+                    'expected_goal_involvements_rolling_5': 'Expected Goal Contributions (xGI)',
+                    'goals_scored_rolling_5': 'Actual Goals Scored - Recent',
+                    'assists_rolling_5': 'Actual Assists - Recent',
+                    'clean_sheets_rolling_5': 'Clean Sheets - Recent',
+                    'saves_rolling_5': 'Saves Made - Recent',
+                    'ict_index_rolling_5': 'ICT Index (Influence/Creativity/Threat)',
+                    'influence_rolling_5': 'Influence on Match Outcome',
+                    'creativity_rolling_5': 'Creativity (Chance Creation)',
+                    'threat_rolling_5': 'Goal Threat (Attacking Danger)',
+                    'bonus_rolling_5': 'Bonus Points Earned - Recent',
+                    'bps_rolling_5': 'Bonus Points System Score',
+                    'value': 'Player Transfer Value (Cost)',
+                    'next_opponent_strength': 'Next Opponent Team Strength',
+                    'next_was_home': 'Playing at Home (Next Match)'
+                }
+                
+                feat_df['Label'] = feat_df['Feature'].map(lambda x: label_map.get(x, x.replace('_', ' ').title()))
+                
+                # Color based on positive/negative
+                feat_df['Color'] = feat_df['Z-Score'].apply(lambda x: 'Above Average' if x > 0 else 'Below Average')
+                
+                bar_chart = alt.Chart(feat_df).mark_bar().encode(
+                    x=alt.X('Z-Score:Q', title='How Extreme (Standard Deviations)'),
+                    y=alt.Y('Label:N', sort='-x', title='', axis=alt.Axis(labelLimit=400)),
+                    color=alt.Color('Color:N', scale=alt.Scale(domain=['Above Average', 'Below Average'], range=['#059669', '#DC2626']), legend=None),
+                    tooltip=[alt.Tooltip('Label:N', title='Stat'), alt.Tooltip('Z-Score:Q', title='Z-Score', format='.2f')]
+                ).properties(height=350)
+                
+                st.altair_chart(bar_chart, use_container_width=True)
+                st.caption("💡 Larger bars = more extreme stats. Green = above average, Red = below average.")
+            else:
+                st.warning("Could not load feature data for this player.")
+                
+        except Exception as e:
+            st.error(f"Model explainer error: {e}")
 
 with tab_wildcard:
     st.info("OPTIMAL AI SQUAD (Budget Ignored)")
