@@ -110,13 +110,18 @@ STAT_TOOLTIPS = {
     'TRANSFERS LEFT': 'Number of free transfers remaining this gameweek (additional transfers cost -4 points each)'
 }
 
-def get_player_metrics(pid, role, fpl_stats, api_stats):
+def get_player_metrics(pid, role, fpl_stats, api_stats, boot):
     p_fpl = fpl_stats[fpl_stats['element'] == pid].sort_values('round', ascending=False).head(5)
     metrics = {}
     metrics['Form (Pts/G)'] = p_fpl['total_points'].mean()
     metrics['Mins/G'] = p_fpl['minutes'].mean()
-    # Convert to percentage: selected is in basis points (1% = 100), so divide by 100
-    metrics['Selected By'] = f"{p_fpl['selected'].iloc[0] / 100:.1f}%" if not p_fpl.empty else "0%"
+    # Calculate actual percentage: selected count / total players * 100
+    total_players = boot.get('total_players', 12000000)  # Fallback to ~12M
+    if not p_fpl.empty:
+        selected_count = p_fpl['selected'].iloc[0]
+        metrics['Selected By'] = f"{(selected_count / total_players) * 100:.1f}%"
+    else:
+        metrics['Selected By'] = "0%"
     metrics['ICT'] = p_fpl['ict_index'].mean()
     if role == 1: # GK
         metrics['Saves/G'] = p_fpl['saves'].mean()
@@ -224,7 +229,7 @@ def set_transfer(out_id, in_row, cost_diff):
 # --- UI COMPONENTS ---
 # DIALOG for Player Details
 @st.dialog("PLAYER ANALYSIS")
-def show_player_card(player, fix_map, fpl_stats, api_stats, is_new=False):
+def show_player_card(player, fix_map, fpl_stats, api_stats, boot, is_new=False):
     fix = fix_map.get(player['team'], {})
     
     if is_new: 
@@ -240,17 +245,32 @@ def show_player_card(player, fix_map, fpl_stats, api_stats, is_new=False):
 
     st.divider()
     
-    # Fixture
+    # Fixture with gradient difficulty color
     diff = fix.get('diff', 3)
-    diff_color = "red" if diff > 3 else "green" if diff < 3 else "grey"
+    
+    # Color gradient: 1 (easy/green) -> 3 (neutral/yellow) -> 5 (hard/red)
+    if diff <= 2:
+        # Easy: Green shades
+        bg_color = f"rgb({int(100 + (diff-1)*50)}, {int(200 - (diff-1)*30)}, {int(100 + (diff-1)*20)})"
+        text_color = "#000"
+    elif diff == 3:
+        # Neutral: Yellow/Orange
+        bg_color = "rgb(255, 200, 100)"
+        text_color = "#000"
+    else:
+        # Hard: Red shades (4-5)
+        intensity = min((diff - 3) / 2, 1)  # 0 to 1 scale
+        bg_color = f"rgb({int(255)}, {int(150 - intensity*100)}, {int(100 - intensity*100)})"
+        text_color = "#FFF"
+    
     st.markdown(f"**NEXT OPPONENT**")
     st.markdown(f"### {fix.get('opp')} ({fix.get('loc')})")
-    st.caption(f"Difficulty: {diff} ({diff_color})")
+    st.markdown(f'<div style="display: inline-block; background: {bg_color}; color: {text_color}; padding: 5px 15px; border-radius: 5px; font-weight: bold; margin-top: 5px;">Difficulty: {diff}/5</div>', unsafe_allow_html=True)
     
     st.divider()
     
     # Stats with hover tooltips
-    metrics, history = get_player_metrics(player['id'], player['element_type'], fpl_stats, api_stats)
+    metrics, history = get_player_metrics(player['id'], player['element_type'], fpl_stats, api_stats, boot)
     m_cols = st.columns(2)
     for i, (k, v) in enumerate(metrics.items()):
         tooltip = STAT_TOOLTIPS.get(k, '')
@@ -306,7 +326,7 @@ def render_pitch_grid(starters, bench, fix_map, fpl_stats, api_stats, prefix, hi
                     btn_type = "primary" if is_new else "secondary"
                     
                     if st.button(label, key=f"{prefix}_{r_idx}_{i}", type=btn_type, use_container_width=True):
-                        show_player_card(p._asdict(), fix_map, fpl_stats, api_stats, is_new)
+                        show_player_card(p._asdict(), fix_map, fpl_stats, api_stats, boot, is_new)
             
             if r_idx < 3: 
                 st.write("")
@@ -322,7 +342,7 @@ def render_pitch_grid(starters, bench, fix_map, fpl_stats, api_stats, prefix, hi
                 btn_type = "primary" if is_new else "secondary"
                 
                 if st.button(label, key=f"{prefix}_bench_{i}", type=btn_type, use_container_width=True):
-                    show_player_card(p._asdict(), fix_map, fpl_stats, api_stats, is_new)
+                    show_player_card(p._asdict(), fix_map, fpl_stats, api_stats, boot, is_new)
 
 # --- MAIN ---
 st.markdown('<div class="title-box"><h1>FPL_ANALYST // V5.0</h1><a href="http://localhost:8501">[ RAW DATA TERMINAL ]</a></div>', unsafe_allow_html=True)
