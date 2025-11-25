@@ -1,0 +1,756 @@
+element,web_name,first_name,second_name,team,element_type,next_event,expected_points,value
+430,Haaland,Erling,Haaland,13,4,13,8.14996,149
+381,M.Salah,Mohamed,Salah,12,3,13,6.563344,142
+136,Thiago,Igor Thiago,Nascimento Rodrigues,5,4,13,6.0437207,64
+418,Doku,Jérémy,Doku,13,3,13,5.532836,65
+488,Bruno G.,Bruno,Guimarães Rodriguez Moura,15,3,13,5.369324,66
+423,N.Gonzalez,Nico,González Iglesias,13,3,13,5.360006,59
+47,Rogers,Morgan,Rogers,2,3,13,5.313946,68
+124,Henderson,Jordan,Henderson,5,3,13,5.219376,50
+58,Kamara,Boubacar,Kamara,2,3,13,5.13415,49
+119,Mbeumo,Bryan,Mbeumo,14,3,13,5.117733,86
+517,Anderson,Elliot,Anderson,16,3,13,5.0668936,53
+84,Tavernier,Marcus,Tavernier,4,3,13,4.8397374,55
+414,Foden,Phil,Foden,13,3,13,4.818759,80
+266,Eze,Eberechi,Eze,1,3,13,4.713464,76
+26,Zubimendi,Martín,Zubimendi Ibáñez,1,3,13,4.67963,54
+120,Schade,Kevin,Schade,5,3,13,4.67656,70
+83,O.Dango,Dango,Ouattara,5,3,13,4.646797,60
+552,Sadiki,Noah,Sadiki,17,3,13,4.643639,50
+515,Gibbs-White,Morgan,Gibbs-White,16,3,13,4.598615,73
+21,Rice,Declan,Rice,1,3,13,4.5881066,69
+178,Welbeck,Danny,Welbeck,6,4,13,4.5696898,65
+668,Xhaka,Granit,Xhaka,17,3,13,4.543308,52
+303,Garner,James,Garner,9,3,13,4.540239,50
+173,Wieffer,Mats,Wieffer,6,3,13,4.520877,49
+283,Mateta,Jean-Philippe,Mateta,8,4,13,4.501251,81
+299,Ndiaye,Iliman,Ndiaye,9,3,13,4.483358,66
+419,Grealish,Jack,Grealish,9,3,13,4.4545474,67
+242,Dewsbury-Hall,Kiernan,Dewsbury-Hall,9,3,13,4.4071617,49
+324,Iwobi,Alex,Iwobi,10,3,13,4.400117,65
+416,Bernardo,Bernardo,Mota Veiga de Carvalho e Silva,13,3,13,4.3878326,63
+85,Adams,Tyler,Adams,4,3,13,4.3875346,50
+121,Damsgaard,Mikkel,Damsgaard,5,3,13,4.372907,58
+271,Kamada,Daichi,Kamada,8,3,13,4.3685293,50
+20,Trossard,Leandro,Trossard,1,3,13,4.3447895,69
+236,Neto,Pedro,Lomba Neto,7,3,13,4.3168163,71
+249,João Pedro,João Pedro,Junqueira de Jesus,7,4,13,4.3130884,75
+7,Calafiori,Riccardo,Calafiori,1,2,13,4.2991223,58
+59,Onana,Amadou,Onana,2,3,13,4.2834506,48
+54,McGinn,John,McGinn,2,3,13,4.27135,54
+328,Sessegnon,Ryan,Sessegnon,10,3,13,4.2480135,54
+731,Kevin,Kevin,Santos Lopes de Macedo,10,3,13,4.245339,59
+673,J.Palhinha,João Maria,Lobo Alves Palhares Costa Palhinha Gonçalves,18,3,13,4.239013,55
+16,Saka,Bukayo,Saka,1,3,13,4.231507,101
+449,B.Fernandes,Bruno,Borges Fernandes,14,3,13,4.220296,89
+8,J.Timber,Jurriën,Timber,1,2,13,4.2016826,62
+291,Tarkowski,James,Tarkowski,9,2,13,4.198841,54
+253,Henderson,Dean,Henderson,8,1,13,4.195313,50
+267,Sarr,Ismaïla,Sarr,8,3,13,4.1901927,67
+736,Donnarumma,Gianluigi,Donnarumma,13,1,13,4.1842704,57
+330,Berge,Sander,Berge,10,3,13,4.1790547,49
+508,N.Williams,Neco,Williams,16,2,13,4.1496773,47
+373,Virgil,Virgil,van Dijk,12,2,13,4.106496,60
+387,Szoboszlai,Dominik,Szoboszlai,12,3,13,4.0655093,66
+287,Pickford,Jordan,Pickford,9,1,13,4.0614443,55
+390,Gravenberch,Ryan,Gravenberch,12,3,13,4.0264034,56
+302,Gana,Idrissa Gana,Gueye,9,3,13,4.0108933,54
+600,Areola,Alphonse,Areola,19,1,13,4.0069523,43
+113,Van den Berg,Sepp,van den Berg,5,2,13,3.9917896,45
+72,Senesi,Marcos,Senesi Barón,4,2,13,3.9601872,50
+384,Gakpo,Cody,Gakpo,12,3,13,3.9548311,75
+354,Ampadu,Ethan,Ampadu,11,3,13,3.9492626,49
+261,Richards,Chris,Richards,8,2,13,3.9428532,45
+22,Merino,Mikel,Merino Zazón,1,3,13,3.9366615,59
+166,Ayari,Yasin,Ayari,6,3,13,3.9182234,49
+547,E.Le Fée,Enzo,Le Fée,17,3,13,3.9017797,49
+1,Raya,David,Raya Martín,1,1,13,3.8669152,59
+273,Wharton,Adam,Wharton,8,3,13,3.8489714,50
+258,Mitchell,Tyrick,Mitchell,8,2,13,3.8293273,50
+717,Xavi,Xavi,Simons,18,3,13,3.822591,67
+708,M.Fernandes,Mateus Gonçalo,Espanha Fernandes,19,3,13,3.819962,55
+129,Yarmoliuk,Yehor,Yarmoliuk,5,3,13,3.817863,50
+160,Minteh,Yankuba,Minteh,6,3,13,3.8117278,61
+200,Anthony,Jaidon,Anthony,3,3,13,3.807916,56
+487,Barnes,Harvey,Barnes,15,3,13,3.7786438,63
+491,Tonali,Sandro,Tonali,15,3,13,3.7374482,54
+722,Florentino,Florentino Ibrain,Morris Luís,3,3,13,3.688236,50
+100,Kroupi.Jr,Junior,Kroupi,4,4,13,3.68644,46
+322,Tete,Kenny,Tete,10,2,13,3.6847625,45
+224,Cucurella,Marc,Cucurella Saseta,7,2,13,3.6795092,61
+82,Semenyo,Antoine,Semenyo,4,3,13,3.658268,80
+64,Watkins,Ollie,Watkins,2,4,13,3.6370554,85
+151,Van Hecke,Jan Paul,van Hecke,6,2,13,3.6294386,44
+654,Strand Larsen,Jørgen,Strand Larsen,20,4,13,3.6221447,63
+110,Kayode,Michael,Kayode,5,2,13,3.6031082,45
+505,Milenković,Nikola,Milenković,16,2,13,3.6012712,52
+256,Muñoz,Daniel,Muñoz Mejía,8,2,13,3.6012106,58
+582,Kudus,Mohammed,Kudus,18,3,13,3.5961199,65
+6,Saliba,William,Saliba,1,2,13,3.5924766,60
+698,Okafor,Noah,Okafor,11,3,13,3.5864637,55
+457,Casemiro,Carlos Henrique,Casimiro,14,3,13,3.5774677,55
+205,Cullen,Josh,Cullen,3,3,13,3.576427,50
+32,Martinez,Emiliano,Martínez Romero,2,1,13,3.5751948,50
+74,Truffert,Adrien,Truffert,4,2,13,3.565052,45
+88,Cook,Lewis,Cook,4,3,13,3.5443125,49
+573,Spence,Djed,Spence,18,2,13,3.54133,45
+450,Cunha,Matheus,Santos Carneiro da Cunha,14,3,13,3.5391934,79
+241,Caicedo,Moisés,Caicedo Corozo,7,3,13,3.519648,61
+169,Gomez,Diego,Gómez Amarilla,6,3,13,3.508796,49
+623,Potts,Freddie,Potts,19,3,13,3.4994943,44
+215,Flemming,Zian,Flemming,3,4,13,3.4891071,53
+158,Georginio,Georginio,Rutter,6,3,13,3.4876592,57
+417,Cherki,Rayan,Cherki,13,3,13,3.473963,64
+565,Vicario,Guglielmo,Vicario,18,1,13,3.455552,50
+257,Lacroix,Maxence,Lacroix,8,2,13,3.4324396,50
+403,Gvardiol,Joško,Gvardiol,13,2,13,3.4113483,58
+237,Enzo,Enzo,Fernández,7,3,13,3.40842,67
+148,F.Kadıoğlu,Ferdi,Kadıoğlu,6,2,13,3.4027543,44
+669,Ndoye,Dan,Ndoye,16,3,13,3.3758943,56
+493,Longstaff,Sean,Longstaff,11,3,13,3.367707,49
+187,Walker,Kyle,Walker,3,2,13,3.3531048,44
+671,Wilson,Callum,Wilson,19,4,13,3.3459163,58
+350,Aaronson,Brenden,Aaronson,11,3,13,3.337297,54
+489,J.Murphy,Jacob,Murphy,15,3,13,3.306678,61
+374,Konaté,Ibrahima,Konaté,12,2,13,3.2963474,54
+36,Cash,Matty,Cash,2,2,13,3.2891853,46
+643,André,André,Trindade da Costa Neto,20,3,13,3.2699797,53
+502,Sels,Matz,Sels,16,1,13,3.261804,47
+624,Bowen,Jarrod,Bowen,19,4,13,3.2429502,77
+735,Traoré,Bertrand,Traoré,17,3,13,3.22454,55
+627,Johnstone,Sam,Johnstone,20,1,13,3.2106495,45
+292,Mykolenko,Vitalii,Mykolenko,9,2,13,3.1958423,49
+712,Yeremy,Yéremy,Pino Santos,8,3,13,3.1946607,58
+108,Ajer,Kristoffer,Ajer,5,2,13,3.1881256,44
+106,Collins,Nathan,Collins,5,2,13,3.1776764,49
+167,Baleba,Carlos,Baleba,6,3,13,3.1762571,47
+90,Scott,Alex,Scott,4,3,13,3.174906,50
+5,Gabriel,Gabriel,dos Santos Magalhães,1,2,13,3.1711113,65
+506,Murillo,Murillo,Costa dos Santos,16,2,13,3.1687753,53
+407,Matheus N.,Matheus,Nunes,13,2,13,3.1512127,53
+272,Lerma,Jefferson,Lerma Solís,8,3,13,3.1409476,49
+490,Joelinton,Joelinton Cássio,Apolinário de Lira,15,3,13,3.1314623,59
+612,L.Paquetá,Lucas,Tolentino Coelho de Lima,19,3,13,3.1305573,59
+192,Hartman,Quilindschy,Hartman,3,2,13,3.1191063,40
+386,Mac Allister,Alexis,Mac Allister,12,3,13,3.1171868,63
+411,O’Reilly,Nico,O'Reilly,13,2,13,3.1125252,50
+226,Chalobah,Trevoh,Chalobah,7,2,13,3.103457,51
+295,Keane,Michael,Keane,9,2,13,3.100833,45
+452,Amad,Amad,Diallo,14,3,13,3.0788767,63
+337,Raúl,Raúl,Jiménez Rodríguez,10,4,13,3.067746,62
+443,Shaw,Luke,Shaw,14,2,13,3.0655499,45
+415,Savinho,Sávio,Moreira de Oliveira,13,3,13,3.056766,69
+684,Thiaw,Malick,Thiaw,15,2,13,3.0445871,49
+694,Mukiele,Nordi,Mukiele,17,2,13,3.0425408,42
+709,Krejčí,Ladislav,Krejcí,20,2,13,3.0414567,45
+436,De Ligt,Matthijs,de Ligt,14,2,13,3.03402,50
+531,Ballard,Daniel,Ballard,17,2,13,3.011966,46
+382,Wirtz,Florian,Wirtz,12,3,13,3.0109444,80
+139,Verbruggen,Bart,Verbruggen,6,1,13,3.0088143,44
+646,Gomes,João Victor,Gomes da Silva,20,3,13,2.9986632,53
+575,Van de Ven,Micky,van de Ven,18,2,13,2.9974482,48
+593,P.M.Sarr,Pape Matar,Sarr,18,3,13,2.9831793,48
+198,Tuanzebe,Axel,Tuanzebe,3,2,13,2.9785194,39
+37,Digne,Lucas,Digne,2,2,13,2.9660892,45
+50,Buendía,Emiliano,Buendía Stati,2,3,13,2.9560928,53
+569,Romero,Cristian,Romero,18,2,13,2.9529173,50
+87,Christie,Ryan,Christie,4,3,13,2.9388456,50
+347,Gudmundsson,Gabriel,Gudmundsson,11,2,13,2.9266884,40
+714,Woltemade,Nick,Woltemade,15,4,13,2.9230723,74
+532,Hume,Trai,Hume,17,2,13,2.9224465,45
+716,Savona,Nicolò,Savona,16,2,13,2.9218593,45
+38,Konsa,Ezri,Konsa Ngoyo,2,2,13,2.919613,44
+521,Sangaré,Ibrahim,Sangaré,16,3,13,2.9147203,49
+314,Leno,Bernd,Leno,10,1,13,2.9133964,50
+580,Johnson,Brennan,Johnson,18,3,13,2.9100163,66
+676,Ugochukwu,Lesley,Ugochukwu,3,3,13,2.8982933,50
+733,Lammens,Senne,Lammens,14,1,13,2.891664,50
+408,Rúben,Rúben,dos Santos Gato Alves Dias,13,2,13,2.8825972,55
+191,Estève,Maxime,Estève,3,2,13,2.8733582,39
+670,Roefs,Robin,Roefs,17,1,13,2.8698187,47
+560,Isidor,Wilson,Isidor,17,4,13,2.8664713,56
+469,Pope,Nick,Pope,15,1,13,2.834725,52
+597,Richarlison,Richarlison,de Andrade,18,4,13,2.8232021,64
+335,King,Josh,King,10,3,13,2.8163931,45
+470,Dúbravka,Martin,Dúbravka,3,1,13,2.8062327,40
+613,Souček,Tomáš,Souček,19,3,13,2.7954664,57
+603,Diouf,El Hadji Malick,Diouf,19,2,13,2.7876558,43
+260,Guéhi,Marc,Guéhi,8,2,13,2.7769268,51
+210,Tchaouna,Loum,Tchaouna,3,3,13,2.767077,49
+41,Pau,Pau,Torres,2,2,13,2.7579753,43
+516,Hudson-Odoi,Callum,Hudson-Odoi,16,3,13,2.7353172,57
+365,Nmecha,Lukas,Nmecha,11,4,13,2.7346194,50
+661,Ekitiké,Hugo,Ekitiké,12,4,13,2.7344308,86
+81,Kluivert,Justin,Kluivert,4,3,13,2.7327874,70
+55,Barkley,Ross,Barkley,2,3,13,2.7304533,48
+67,Petrović,Đorđe,Petrović,4,1,13,2.7203135,45
+348,Rodon,Joe,Rodon,11,2,13,2.7179523,41
+53,Malen,Donyell,Malen,2,3,13,2.7175558,51
+610,Wan-Bissaka,Aaron,Wan-Bissaka,19,2,13,2.7133267,43
+615,Summerville,Crysencio,Summerville,19,3,13,2.711577,55
+665,Perri,Lucas Estella,Perri,11,1,13,2.7088742,45
+648,Munetsi,Marshall,Munetsi,20,3,13,2.7064416,54
+239,Gittens,Jamie,Bynoe-Gittens,7,3,13,2.7051165,61
+97,Evanilson,Francisco Evanilson,de Lima Barbosa,4,4,13,2.6985672,70
+342,Bogle,Jayden,Bogle,11,2,13,2.6958208,45
+329,Wilson,Harry,Wilson,10,3,13,2.683369,52
+146,Dunk,Lewis,Dunk,6,2,13,2.6501071,45
+101,Kelleher,Caoimhín,Kelleher,5,1,13,2.6335492,45
+375,Bradley,Conor,Bradley,12,2,13,2.62993,50
+86,Brooks,David,Brooks,4,3,13,2.6294787,50
+724,Geertruida,Lutsharel,Geertruida,17,2,13,2.5862422,45
+585,Bentancur,Rodrigo,Bentancur,18,3,13,2.5663202,53
+541,Reinildo,Reinildo,Mandava,17,2,13,2.564064,40
+609,Todibo,Jean-Clair,Todibo,19,2,13,2.5593715,43
+48,Tielemans,Youri,Tielemans,2,3,13,2.5499265,59
+318,Bassey,Calvin,Bassey,10,2,13,2.5456738,45
+52,J.Ramsey,Jacob,Ramsey,15,3,13,2.5364027,53
+317,Andersen,Joachim,Andersen,10,2,13,2.5022852,45
+310,Barry,Thierno,Barry,9,4,13,2.4970577,57
+453,Garnacho,Alejandro,Garnacho Ferreyra,7,3,13,2.4689324,64
+202,Bruun Larsen,Jacob,Bruun Larsen,3,3,13,2.46021,53
+605,Kilman,Maximilian,Kilman,19,2,13,2.4443662,43
+636,S.Bueno,Santiago,Ignacio Bueno,20,2,13,2.4305413,44
+476,Burn,Dan,Burn,15,2,13,2.4126482,51
+526,Igor Jesus,Igor Jesus,Maciel da Cruz,16,4,13,2.3886778,58
+485,Gordon,Anthony,Gordon,15,3,13,2.3686666,73
+499,Isak,Alexander,Isak,12,4,13,2.3627625,104
+633,H.Bueno,Hugo,Bueno López,20,2,13,2.3030055,44
+413,Marmoush,Omar,Marmoush,13,3,13,2.2727695,83
+695,Tchatchoua,Jackson,Tchatchoua,20,2,13,2.2629516,45
+666,Gyökeres,Viktor,Gyökeres,1,4,13,2.25876,88
+246,Andrey Santos,Andrey,Nascimento dos Santos,7,3,13,2.1458526,45
+475,Botman,Sven,Botman,15,2,13,2.1326704,49
+519,Dominguez,Nicolás,Domínguez,16,3,13,2.116751,50
+388,C.Jones,Curtis,Jones,12,3,13,2.1163533,54
+293,O'Brien,Jake,O'Brien,9,2,13,2.095623,49
+588,Odobert,Wilson,Odobert,18,3,13,2.086567,53
+644,Bellegarde,Jean-Ricner,Bellegarde,20,3,13,2.082152,52
+444,Yoro,Leny,Yoro,14,2,13,2.0564253,44
+228,Gusto,Malo,Gusto,7,2,13,2.0496945,49
+358,Tanaka,Tanaka,Ao,11,3,13,2.028025,48
+372,Robertson,Andrew,Robertson,12,2,13,2.0188801,58
+568,Pedro Porro,Pedro,Porro Sauceda,18,2,13,2.0182214,55
+691,Calvert-Lewin,Dominic,Calvert-Lewin,11,4,13,2.0133471,55
+456,Sancho,Jadon,Sancho,2,3,13,1.9963739,58
+726,Kolo Muani,Randal,Kolo Muani,18,4,13,1.9844546,69
+427,Reijnders,Tijjani,Reijnders,13,3,13,1.9735471,54
+225,James,Reece,James,7,2,13,1.9611776,56
+441,Dorgu,Patrick,Dorgu,14,2,13,1.9568162,42
+693,Hutchinson,Omari,Hutchinson,16,3,13,1.8889245,54
+371,Kerkez,Milos,Kerkez,12,2,13,1.881686,57
+31,G.Jesus,Gabriel,Fernando de Jesus,1,4,13,1.8809273,64
+574,Udogie,Destiny,Udogie,18,2,13,1.8767161,44
+713,A.Jimenez,Álex,Jiménez Sánchez,4,2,13,1.8444501,45
+367,Mamardashvili,Giorgi,Mamardashvili,12,1,13,1.8336003,43
+366,A.Becker,Alisson,Becker,12,1,13,1.828877,54
+125,Janelt,Vitaly,Janelt,5,3,13,1.8254943,49
+304,Iroegbunam,Tim,Iroegbunam,9,3,13,1.8192253,49
+637,Toti,Toti,Gomes,20,2,13,1.8066976,43
+660,Stach,Anton,Stach,11,3,13,1.8042154,49
+325,Smith Rowe,Emile,Smith Rowe,10,3,13,1.8012565,56
+238,Estêvão,Estêvão,Almeida de Oliveira Gonçalves,7,3,13,1.7634327,65
+584,Tel,Mathys,Tel,18,3,13,1.750794,63
+440,Dalot,Diogo,Dalot Teixeira,14,2,13,1.7363524,44
+677,Guessand,Evann,Guessand,2,3,13,1.7229824,62
+126,Jensen,Mathias,Jensen,5,3,13,1.7211065,49
+230,Fofana,Wesley,Fofana,7,2,13,1.7049327,44
+137,Morgan,Iwan,Morgan,5,4,13,1.6985693,44
+353,James,Daniel,James,11,3,13,1.6954855,53
+663,J.Arias,Jhon,Arias,20,3,13,1.6929134,51
+486,Elanga,Anthony,Elanga,15,3,13,1.6865149,66
+311,Beto,Norberto Bercique,Gomes Betuncal,9,4,13,1.6832739,52
+455,Mount,Mason,Mount,14,3,13,1.682325,59
+681,Šeško,Benjamin,Sesko,14,4,13,1.6671205,73
+220,Sánchez,Robert,Lynch Sánchez,7,1,13,1.6578385,48
+98,Enes Ünal,Enes,Ünal,4,4,13,1.647795,54
+522,Yates,Ryan,Yates,16,3,13,1.628365,47
+474,Schär,Fabian,Schär,15,2,13,1.6195223,53
+685,Diakité,Bafodé,Diakité,4,2,13,1.600548,45
+235,Palmer,Cole,Palmer,7,3,13,1.5918651,103
+727,Chukwueze,Samuel,Chukwueze,10,3,13,1.5802361,53
+466,Zirkzee,Joshua,Zirkzee,14,4,13,1.5545549,58
+631,Agbadou,Emmanuel,Agbadou,20,2,13,1.5418601,43
+570,Danso,Kevin,Danso,18,2,13,1.5206779,43
+473,Hall,Lewis,Hall,15,2,13,1.4588946,52
+478,Trippier,Kieran,Trippier,15,2,13,1.4555249,50
+720,Tolu,Tolu,Arokodare,20,4,13,1.428599,55
+385,Chiesa,Federico,Chiesa,12,3,13,1.4087429,64
+107,Lewis-Potter,Keane,Lewis-Potter,5,2,13,1.4025612,49
+379,R.Williams,Rhys,Williams,12,2,13,1.3632123,38
+326,Adama,Adama,Traoré Diarra,10,3,13,1.3440391,52
+250,Delap,Liam,Delap,7,4,13,1.3216152,62
+209,Laurent,Josh,Laurent,3,3,13,1.3203238,49
+19,Martinelli,Gabriel,Martinelli Silva,1,3,13,1.3060856,68
+697,Adli,Amine,Adli,4,3,13,1.2773691,54
+424,Bobb,Oscar,Bobb,13,3,13,1.27574,53
+680,Broja,Armando,Broja,3,4,13,1.2506297,52
+352,Harrison,Jack,Harrison,11,3,13,1.2462364,52
+725,Hincapie,Piero,Hincapié,1,2,13,1.232188,54
+46,Yasin,Yasin,Özcan,2,2,13,1.2306643,40
+527,Awoniyi,Taiwo,Awoniyi,16,4,13,1.2061993,52
+18,Madueke,Noni,Madueke,1,3,13,1.2030827,68
+207,Hannibal,Hannibal,Mejbri,3,3,13,1.1855356,48
+344,Bijol,Jaka,Bijol,11,2,13,1.1796666,39
+721,Milosavljević,Veljko,Milosavljevic,4,2,13,1.1605343,45
+399,Ederson M.,Ederson,Santana de Moraes,13,1,13,1.1583788,53
+730,Brobbey,Brian,Brobbey,17,4,13,1.1482673,55
+642,Hee Chan,Hwang,Hee-chan,20,3,13,1.1393992,57
+438,Mazraoui,Noussair,Mazraoui,14,2,13,1.138072,49
+116,Hickey,Aaron,Hickey,5,2,13,1.1219143,40
+338,Muniz,Rodrigo,Muniz Carvalho,10,4,13,1.1094189,54
+30,Havertz,Kai,Havertz,1,4,13,1.1070024,73
+402,Aït-Nouri,Rayan,Aït-Nouri,13,2,13,1.1066892,57
+27,Nelson,Reiss,Nelson,5,3,13,1.0990022,48
+512,O.Richards,Omar,Richards,16,2,13,1.0979171,45
+17,Ødegaard,Martin,Ødegaard,1,3,13,1.0926242,78
+500,Osula,William,Osula,15,4,13,1.0766649,55
+163,Hinshelwood,Jack,Hinshelwood,6,3,13,1.0757058,51
+181,Kostoulas,Charalampos,Kostoulas,6,4,13,1.0729352,48
+284,Nketiah,Eddie,Nketiah,8,4,13,1.0469226,54
+135,Wissa,Yoane,Wissa,15,4,13,1.0372617,73
+39,Maatsen,Ian,Maatsen,2,2,13,1.0091482,42
+674,Ramsdale,Aaron,Ramsdale,15,1,13,0.9719422,48
+723,Canvot,Jaydee,Canvot,8,2,13,0.9690511,45
+270,Hughes,Will,Hughes,8,3,13,0.95558393,48
+343,Struijk,Pascal,Struijk,11,2,13,0.9458704,44
+180,Tzimas,Stefanos,Tzimas,6,4,13,0.9279088,53
+217,Foster,Lyle,Foster,3,4,13,0.9258363,50
+404,Akanji,Manuel,Akanji,13,2,13,0.91818166,54
+406,Khusanov,Abdukodir,Khusanov,13,2,13,0.91768575,54
+409,Stones,John,Stones,13,2,13,0.9152098,54
+290,Branthwaite,Jarrad,Branthwaite,9,2,13,0.8964347,53
+149,Igor,Igor Julio,dos Santos de Paulo,19,2,13,0.8919707,45
+405,Aké,Nathan,Aké,13,2,13,0.88557637,53
+525,Wood,Chris,Wood,16,4,13,0.8795038,72
+332,Lukić,Saša,Lukić,10,3,13,0.87451804,50
+145,De Cuyper,Maxim,De Cuyper,6,2,13,0.8687931,43
+12,Zinchenko,Oleksandr,Zinchenko,16,2,13,0.86196756,49
+383,Luis Díaz,Luis,Díaz Marulanda,12,3,13,0.8524434,80
+397,Darwin,Darwin,Núñez Ribeiro,12,4,13,0.8439778,65
+596,Solanke,Dominic,Solanke-Mitchell,18,4,13,0.8413343,72
+682,Møller Wolfe,David,Møller Wolfe,20,2,13,0.8411531,43
+362,Piroe,Joël,Piroe,11,4,13,0.8391548,50
+477,Livramento,Tino,Livramento,15,2,13,0.8390106,49
+9,Kiwior,Jakub,Kiwior,1,2,13,0.8367038,54
+370,Frimpong,Jeremie,Frimpong,12,2,13,0.8360027,57
+635,R.Gomes,Rodrigo,Martins Gomes,20,2,13,0.8297947,44
+25,Nwaneri,Ethan,Nwaneri,1,3,13,0.82711995,51
+432,Onana,André,Onana,14,1,13,0.8119165,49
+300,McNeil,Dwight,McNeil,9,3,13,0.80692786,55
+251,N.Jackson,Nicolas,Jackson,7,4,13,0.80464953,65
+465,Højlund,Rasmus,Højlund,14,4,13,0.8029938,63
+662,Mosquera,Cristhian,Mosquera,1,2,13,0.80003655,54
+301,Alcaraz,Carlos,Alcaraz Durán,9,3,13,0.7905138,52
+179,Ferguson,Evan,Ferguson,6,4,13,0.7898674,55
+11,White,Benjamin,White,1,2,13,0.78786844,53
+127,Nunes,Gustavo,Nunes Fernandes Gomes,5,3,13,0.78735,49
+442,Maguire,Harry,Maguire,14,2,13,0.78132427,44
+42,A.García,Andrés,García,2,2,13,0.7789751,39
+553,Talbi,Chemsdine,Talbi,17,3,13,0.7778486,50
+331,Cairney,Tom,Cairney,10,3,13,0.77429706,49
+561,Mayenda,Eliezer,Mayenda Dossou,17,4,13,0.7740202,54
+699,Douglas Luiz,Douglas Luiz,Soares de Paulo,16,3,13,0.76767576,50
+206,Edwards,Marcus,Edwards,3,3,13,0.7642599,47
+659,Walker-Peters,Kyle,Walker-Peters,19,2,13,0.75973934,43
+232,Tosin,Tosin,Adarabioyo,7,2,13,0.7596876,42
+252,Marc Guiu,Marc,Guiu Paz,7,4,13,0.7228881,42
+431,Bayindir,Altay,Bayındır,14,1,13,0.719864,48
+749,Mané,Mateus,Mané,20,4,13,0.7169999,45
+10,Lewis-Skelly,Myles,Lewis-Skelly,1,2,13,0.7125448,51
+412,Vitor Reis,Vitor,de Oliveira Nunes dos Reis,13,2,13,0.70343363,50
+216,Amdouni,Zeki,Amdouni,3,4,13,0.69685066,48
+99,Adu-Adjei,Daniel,Adu-Adjei,4,4,13,0.6923209,44
+696,Kalimuendo,Arnaud,Kalimuendo,16,4,13,0.6911232,60
+218,Barnes,Ashley,Barnes,3,4,13,0.6763876,43
+458,Mainoo,Kobbie,Mainoo,14,3,13,0.6713057,47
+66,Neto,Norberto,Murara Neto,4,1,13,0.65553355,45
+219,Obafemi,Michael,Obafemi,3,4,13,0.65354204,44
+259,Sosa,Borna,Sosa,8,2,13,0.6497857,48
+400,Ortega Moreno,Stefan,Ortega Moreno,13,1,13,0.6345183,48
+625,Füllkrug,Niclas,Füllkrug,19,4,13,0.6276627,56
+732,Uche,Christantus,Uche,8,4,13,0.6248289,55
+143,Boscagli,Olivier,Boscagli,6,2,13,0.62455404,43
+71,Zabarnyi,Illia,Zabarnyi,4,2,13,0.62243754,50
+410,Lewis,Rico,Lewis,13,2,13,0.62033415,48
+24,Nørgaard,Christian,Nørgaard,1,3,13,0.61871314,52
+656,Kalajdžić,Saša,Kalajdžić,20,4,13,0.6169775,49
+655,Fábio Silva,Fábio,Soares Silva,20,4,13,0.616969,49
+65,Redmond,Zépiqueno,Redmond,2,4,13,0.61544013,45
+285,Édouard,Odsonne,Édouard,8,4,13,0.614972,50
+312,Y.Chermiti,Youssef,Ramalho Chermiti,9,4,13,0.59961706,49
+398,Danns,Jayden,Danns,12,4,13,0.59842885,44
+468,Wheatley,Ethan,Wheatley,14,4,13,0.59274256,45
+737,Kusi-Asare,Jonah,Kusi-Asare,10,4,13,0.59035313,45
+40,Mings,Tyrone,Mings,2,2,13,0.5902059,44
+501,Neave,Sean,Neave,15,4,13,0.57505286,44
+467,Obi,Chido,Obi,14,4,13,0.5710771,43
+657,Chiwome,Leon,Chiwome,20,4,13,0.568839,44
+286,Marsh,Zach,Marsh,8,4,13,0.5665957,45
+638,Hoever,Ki-Jana,Hoever,20,2,13,0.5661048,39
+112,Roerslev,Mads,Roerslev Rasmussen,5,2,13,0.5647149,45
+194,Jordan,Jordan,Beyer,3,2,13,0.5614306,40
+658,Fraser,Nathan,Fraser,20,4,13,0.5590124,43
+479,Krafth,Emil,Krafth,15,2,13,0.557888,43
+313,Sherif,Martin,Sherif,9,4,13,0.5512515,44
+728,Röhl,Merlin,Röhl,9,3,13,0.5471304,50
+634,Mosquera,Yerson,Mosquera Valdelamar,20,2,13,0.54578257,43
+109,Henry,Rico,Henry,5,2,13,0.5428584,43
+231,M.Sarr,Mamadou,Sarr,7,2,13,0.5321919,45
+507,Aina,Ola,Aina,16,2,13,0.52379155,47
+598,Lankshear,Will,Lankshear,18,4,13,0.5146149,45
+376,Gomez,Joe,Gomez,12,2,13,0.5088007,49
+563,Luís Hemir,Luís Hemir,Silva Semedo,17,4,13,0.50752014,44
+564,Rusyn,Nazarii,Rusyn,17,4,13,0.5074358,44
+562,Abdullahi,Ahmed,Abdullahi,17,4,13,0.49755803,43
+599,Scarlett,Dane,Scarlett,18,4,13,0.49507406,43
+316,Robinson,Antonee,Robinson,10,2,13,0.49333277,49
+626,Marshall,Callum,Marshall,19,4,13,0.48810306,44
+111,Pinnock,Ethan,Pinnock,5,2,13,0.4795008,43
+534,Anderson,Joe,Anderson,17,2,13,0.47516546,39
+177,Moran,Andrew,Moran,6,3,13,0.47421095,45
+421,Rodrigo,Rodrigo 'Rodri',Hernandez Cascante,13,3,13,0.46839103,63
+364,Mateo Joseph,Mateo,Joseph Fernández-Regatillo,11,4,13,0.46508762,50
+451,Rashford,Marcus,Rashford,14,3,13,0.4618166,70
+49,Bailey,Leon,Bailey,2,3,13,0.4590163,55
+51,Iling Jr,Samuel,Iling-Junior,2,3,13,0.45670468,55
+363,Bamford,Patrick,Bamford,11,4,13,0.45595643,49
+741,Gray,Harry,Gray,11,4,13,0.45294088,45
+692,Leoni,Giovanni,Leoni,12,2,13,0.45250103,49
+296,Patterson,Nathan,Patterson,9,2,13,0.44790456,44
+377,Tsimikas,Konstantinos,Tsimikas,12,2,13,0.44184497,48
+579,Son,Son,Heung-min,18,3,13,0.44046614,85
+437,Martinez,Lisandro,Martínez,14,2,13,0.43347397,48
+294,Coleman,Séamus,Coleman,9,2,13,0.43210503,43
+459,Ugarte,Manuel,Ugarte Ribeiro,14,3,13,0.42342964,48
+44,Bogarde,Lamare,Bogarde,2,2,13,0.42291096,40
+590,Bryan,Bryan,Gil Salvatierra,18,3,13,0.4216702,49
+509,David Carmo,David,Mota Veiga Teixeira do Carmo,16,2,13,0.41921112,45
+572,Dragusin,Radu,Drăgușin,18,2,13,0.410915,45
+152,Veltman,Joël,Veltman,6,2,13,0.40205392,43
+719,Lindelöf,Victor,Lindelöf,2,2,13,0.39904317,45
+581,Maddison,James,Maddison,18,3,13,0.39847907,68
+729,Cuiabano,Luis Eduardo,Soares da Silva,16,2,13,0.3984648,45
+511,Morato,Felipe,Rodrigues da Silva,16,2,13,0.39016023,43
+73,Smith,Adam,Smith,4,2,13,0.3888007,44
+43,Alex Moreno,Álex,Moreno Lopera,2,2,13,0.3744534,40
+227,Colwill,Levi,Samuels Colwill,7,2,13,0.3723412,48
+147,Estupiñan,Pervis,Estupiñán Tenorio,6,2,13,0.3699716,45
+628,José Sá,José,Malheiro de Sá,20,1,13,0.36853528,43
+320,Diop,Issa,Diop,10,2,13,0.3670449,44
+686,Ngumoha,Rio,Ngumoha,12,3,13,0.36572248,45
+157,Mitoma,Mitoma,Kaoru,6,3,13,0.36467472,61
+538,Johnson,Zak,Johnson,17,2,13,0.35135546,39
+233,Acheampong,Josh,Acheampong,7,2,13,0.35053787,39
+172,Watson,Tom,Watson,6,3,13,0.343752,49
+123,Carvalho,Fábio,Freitas Gouveia Carvalho,5,3,13,0.3435847,48
+115,Fredrick,Benjamin,Fredrick,5,2,13,0.3428515,40
+118,Meghoma,Jayden,Meghoma,5,2,13,0.34153473,40
+276,Devenny,Justin,Devenny,8,3,13,0.33817226,43
+56,Barrenechea,Enzo,Barrenechea,2,3,13,0.33816057,50
+57,Dobbin,Lewis,Dobbin,2,3,13,0.33734363,50
+150,Lamptey,Tariq,Lamptey,6,2,13,0.32914284,44
+153,Webster,Adam,Webster,6,2,13,0.32787645,44
+45,Sousa,Lino,da Cruz Sousa,2,2,13,0.32768106,39
+510,Jair Cunha,Jair,Paula da Cunha Filho,16,2,13,0.32753068,43
+420,Gündoğan,İlkay,Gündoğan,13,3,13,0.32194754,63
+571,Davies,Ben,Davies,18,2,13,0.3208538,43
+229,B.Badiashile,Benoît,Badiashile Mukinayi,7,2,13,0.3205365,44
+244,Lavia,Roméo,Lavia,7,3,13,0.32033265,49
+122,Milambo,Antoni,Milambo,5,3,13,0.3195346,52
+543,Adingra,Simon,Adingra,17,3,13,0.318907,51
+186,Roberts,Connor,Roberts,3,2,13,0.31589237,44
+667,Aznou,Adam,Aznou,9,2,13,0.31322065,43
+23,Fábio Vieira,Fábio,Ferreira Vieira,1,3,13,0.31258294,54
+159,March,Solly,March,6,3,13,0.31002873,58
+586,Bergvall,Lucas,Bergvall,18,3,13,0.3019819,54
+583,Kulusevski,Dejan,Kulusevski,18,3,13,0.29992232,64
+114,Arthur,Benjamin,Arthur,5,2,13,0.29739594,39
+447,Heaven,Ayden,Heaven,14,2,13,0.2966583,38
+117,Ji-soo,Kim,Ji-soo,5,2,13,0.29607913,39
+321,J.Cuenca,Jorge,Cuenca Barreno,10,2,13,0.29587868,44
+494,Willock,Joe,Willock,15,3,13,0.29481313,50
+683,Alderete,Omar,Alderete,17,2,13,0.29418418,41
+162,Gruda,Brajan,Gruda,6,3,13,0.29251376,54
+128,Onyeka,Frank,Onyeka,5,3,13,0.29101768,49
+632,Doherty,Matt,Doherty,20,2,13,0.29047504,44
+672,Hato,Jorrel,Hato,7,2,13,0.29035997,47
+551,Rigg,Chris,Rigg,17,3,13,0.28910017,48
+182,Trafford,James,Trafford,13,1,13,0.28881097,46
+144,Coppola,Diego,Coppola,6,2,13,0.28835443,43
+195,Lucas Pires,Lucas,Pires Silva,3,2,13,0.28089538,39
+262,Chadi Riad,Chadi,Riad Dnanou,8,2,13,0.2787981,40
+264,Holding,Rob,Holding,8,2,13,0.27794158,40
+265,Kporha,Caleb,Kporha,8,2,13,0.2775768,40
+608,Scarles,Ollie,Scarles,19,2,13,0.2758677,44
+170,Milner,James,Milner,6,3,13,0.26550642,49
+391,Gannon-Doak,Ben,Gannon-Doak,4,3,13,0.26469696,49
+164,O'Riley,Matt,O'Riley,6,3,13,0.2633997,55
+621,Irving,Andy,Irving,19,3,13,0.26218626,44
+422,Kovačić,Mateo,Kovačić,13,3,13,0.2605666,59
+319,Castagne,Timothy,Castagne,10,2,13,0.2600635,44
+60,Broggio,Ben,Broggio,2,3,13,0.25833312,45
+619,L.Guilherme,Luis Guilherme,Lira dos Santos,19,3,13,0.25792095,49
+61,Dendoncker,Leander,Dendoncker,2,3,13,0.25761274,45
+62,Jimoh-Aloba,Jamaldeen,Jimoh-Aloba,2,3,13,0.25693104,45
+520,O'Brien,Lewis,O'Brien,16,3,13,0.25180104,50
+161,Enciso,Julio,Enciso Espínola,6,3,13,0.24980423,54
+492,Antoñito C.,Antoñito,Cordero Campillo,15,3,13,0.24931505,49
+554,Ba,Abdoullah,Ba,17,3,13,0.24840066,43
+165,Sima,Abdallah,Sima,6,3,13,0.24813479,54
+454,Antony,Antony,dos Santos,14,3,13,0.24686083,59
+63,Young,Kadan,Young,2,3,13,0.24319318,44
+263,Clyne,Nathaniel,Clyne,8,2,13,0.23559585,39
+77,Hill,James,Hill,4,2,13,0.23289707,40
+201,Benson,Manuel,Benson Hedilazio,3,3,13,0.23269749,54
+528,Patterson,Anthony,Patterson,17,1,13,0.2305382,43
+497,L.Miley,Lewis,Miley,15,3,13,0.23010686,44
+734,Bakwa,Dilane,Bakwa,16,3,13,0.22731227,60
+604,Emerson,Emerson,Palmieri dos Santos,19,2,13,0.22683269,44
+738,Fabianski,Lukasz,Fabianski,19,1,13,0.22674973,45
+607,N.Aguerd,Nayef,Aguerd,19,2,13,0.2267124,44
+297,Dixon,Roman,Dixon,9,2,13,0.22548345,39
+298,Welch,Reece,Welch,9,2,13,0.22518605,39
+606,Mavropanos,Konstantinos,Mavropanos,19,2,13,0.22271255,44
+480,Lascelles,Jamaal,Lascelles,15,2,13,0.22173604,43
+91,Sinisterra,Luis,Sinisterra Lucumí,4,3,13,0.22121969,50
+130,Donovan,Romelle,Donovan,5,3,13,0.21267629,45
+132,Maghoma,Paris,Maghoma,5,3,13,0.21148038,45
+134,Trevitt,Ryan,Trevitt,5,3,13,0.2102845,45
+533,Alese,Aji,Alese,17,2,13,0.20869139,40
+535,Cirkin,Dennis,Cirkin,17,2,13,0.20842814,40
+750,Rowswell,James,Rowswell,18,2,13,0.2083692,40
+536,Hjelde,Leo Fuhr,Hjelde,17,2,13,0.20829657,40
+537,Huggins,Niall,Huggins,17,2,13,0.2081649,40
+539,O'Nien,Luke,O'Nien,17,2,13,0.20790169,40
+745,Byfield,Jun'ai,Byfield,18,2,13,0.20778435,40
+89,Philip,Philip,Billing,4,3,13,0.20757625,49
+542,Seelt,Jenson,Seelt,17,2,13,0.20750684,40
+740,Mfuni,Stephen,Mfuni,13,2,13,0.20719948,40
+79,Mepham,Chris,Mepham,4,2,13,0.20461345,40
+80,Soler,Julio,Soler Barreto,4,2,13,0.2042276,40
+576,Phillips,Ashley,Phillips,18,2,13,0.20397511,40
+577,Takai,Takai,Kōta,18,2,13,0.20387957,40
+701,Rowe,Triston,Rowe,2,2,13,0.20267731,40
+240,Nkunku,Christopher,Nkunku,7,3,13,0.20009974,59
+131,Konak,Yunus Emre,Konak,5,3,13,0.1996229,44
+645,Fer López,Fer,López González,20,3,13,0.19918048,52
+133,Peart-Harris,Myles,Peart-Harris,5,3,13,0.19841915,44
+753,Ruddy,John,Ruddy,15,1,13,0.19786029,40
+14,Kacurri,Maldini,Kacurri,1,2,13,0.19476864,39
+15,Nichols,Josh,Nichols,1,2,13,0.19435829,39
+439,D.Leon,Diego,León Blanco,14,2,13,0.18994173,42
+389,Elliott,Harvey,Elliott,2,3,13,0.18672119,54
+327,Andreas,Andreas,Hoelgebaum Pereira,10,3,13,0.18448511,53
+268,Doucouré,Cheick,Doucouré,8,3,13,0.18434358,49
+174,Yalcouye,Malick,Yalcouyé,6,3,13,0.18261693,50
+175,Knight,Joe,Knight,6,3,13,0.18176913,45
+183,Weiss,Max,Weiß,3,1,13,0.18105473,43
+154,Cashin,Eiran,Cashin,6,2,13,0.18034431,40
+155,Slater,Jacob,Slater,6,2,13,0.18009982,40
+28,Kabia,Ismeal,Kabia,1,3,13,0.17833184,45
+513,Abbott,Zach,Abbott,16,2,13,0.17803091,39
+514,Boly,Willy,Boly,16,2,13,0.17793533,39
+29,Sambi,Albert,Sambi Lokonga,1,3,13,0.17782429,45
+540,Pembele,Timothée,Pembélé,17,2,13,0.17545074,39
+710,Patterson,Travis,Patterson,2,2,13,0.17542556,39
+705,Campbell,Elijah,Campbell,9,2,13,0.174965,39
+425,Echeverri,Claudio,Echeverri,13,3,13,0.17427781,54
+138,Steele,Jason,Steele,6,1,13,0.1733969,43
+578,Vuskovic,Luka,Vušković,18,2,13,0.17281887,39
+678,Masuaku,Arthur,Masuaku,17,2,13,0.17247805,39
+189,Dodgson,Owen,Dodgson,3,2,13,0.17178664,40
+647,Guedes,Gonçalo Manuel,Ganchinho Guedes,20,3,13,0.17174149,55
+193,Humphreys,Bashir,Humphreys,3,2,13,0.17080864,40
+208,Koleosho,Luca,Koleosho,3,3,13,0.17075631,50
+196,Sambo,Shurandy,Sambo,3,2,13,0.17007515,40
+75,Akinmboni,Matai,Akinmboni,4,2,13,0.16991118,39
+76,Bevan,Owen,Bevan,4,2,13,0.1695469,39
+171,Sarmiento,Jeremy,Sarmiento Morante,6,3,13,0.1694789,49
+78,J.Araujo,Julián,Araujo Zúñiga,4,2,13,0.16881832,39
+190,Ekdal,Hjalmar,Ekdal,3,2,13,0.1674648,40
+269,Esse,Romain,Esse,8,3,13,0.16685486,47
+288,Travers,Mark,Travers,9,1,13,0.16631411,44
+518,Jota,João Pedro,Ferreira da Silva,16,3,13,0.1661888,54
+204,Churlinov,Darko,Churlinov,3,3,13,0.16472873,49
+545,Roberts,Patrick,Roberts,17,3,13,0.16404949,54
+243,George,Tyrique,George,7,3,13,0.1628167,49
+589,Solomon,Manor,Solomon,18,3,13,0.1612718,54
+707,Dibling,Tyler,Dibling,9,3,13,0.16006884,54
+203,Boateng,Enock,Agyei,3,3,13,0.15962023,48
+92,Faivre,Romain,Faivre,4,3,13,0.15909156,45
+93,H.Traorè,Hamed,Traorè,4,3,13,0.15892404,45
+94,Sadi,Dominic,Sadi,4,3,13,0.15875654,45
+96,Winterburn,Ben,Winterburn,4,3,13,0.15842156,45
+13,Clarke,Brayden,Clarke,1,2,13,0.15769908,38
+426,McAtee,James,McAtee,16,3,13,0.15742995,51
+544,Diarra,Habib,Diarra,17,3,13,0.15682961,53
+277,Ebiowei,Malcolm,Ebiowei,8,3,13,0.1563411,45
+279,M.França,Matheus,França de Oliveira,8,3,13,0.15597375,45
+280,Ozoh,David,Ozoh,8,3,13,0.15579008,45
+281,Rodney,Kaden,Rodney,8,3,13,0.15560639,45
+282,Umeh,Franco,Umeh-Chibueze,8,3,13,0.15542267,45
+95,Silcott-Duberry,Zain,Silcott-Duberry,4,3,13,0.15313186,44
+274,Agbinone,Asher,Agbinone,8,3,13,0.15254709,44
+275,Ahamada,Naouirou,Ahamada,8,3,13,0.15235391,44
+278,J.Rak-Sakyi,Jesurun,Rak-Sakyi,8,3,13,0.15177445,44
+428,Nypan,Sverre,Nypan,13,3,13,0.15171438,50
+744,Oriola,Nehemiah,Oriola,6,3,13,0.15101969,45
+305,Armstrong,Harrison,Armstrong,9,3,13,0.15080601,45
+652,Gonzalez,Enso,González Medina,20,3,13,0.15075272,44
+234,Anselmino,Aarón,Anselmino,7,2,13,0.15002885,40
+308,Heath,Isaac,Heath,9,3,13,0.1500119,45
+309,Metcalfe,Jenson,Metcalfe,9,3,13,0.14977232,45
+392,Endo,Endo,Wataru,12,3,13,0.14855012,49
+587,Bissouma,Yves,Bissouma,18,3,13,0.14771703,52
+336,Reed,Harrison,Reed,10,3,13,0.14718822,43
+156,Tasker,Charlie,Tasker,6,2,13,0.14715898,39
+176,Mazilu,Adrian,Mazilu,6,3,13,0.14674163,45
+649,B.Traore,Boubacar,Traoré,20,3,13,0.14608313,50
+306,Bates,Callum,Bates,9,3,13,0.14512178,44
+307,Ebere,Coby,Ebere,9,3,13,0.14489216,44
+715,John,John Victor,Maciel Furtado,16,1,13,0.14432807,40
+212,Adewumi,Oluwaseun,Adewumi,3,3,13,0.14316705,45
+213,Banel,Jaydon,Banel,3,3,13,0.1430721,45
+429,Phillips,Kalvin,Phillips,13,3,13,0.14123438,48
+188,Delcroix,Hannes,Delcroix,3,2,13,0.14106038,39
+718,S.Magassa,Soungoutou,Magassa,19,3,13,0.14035915,50
+197,Sonne,Oliver,Sonne,3,2,13,0.13937786,39
+748,Dasilva,Josh,Dasilva,5,3,13,0.13920784,50
+199,Worrall,Joe,Worrall,3,2,13,0.13900545,39
+640,Pedro Lima,Pedro,Cardoso de Lima,20,2,13,0.138325,40
+639,Meupiyou,Bastien,Meupiyou Menadjou,20,2,13,0.1381925,40
+211,A.Ramsey,Aaron,Ramsey,3,3,13,0.13807246,44
+214,Trésor,Mike,Trésor Ndayishimiye,3,3,13,0.1377875,44
+351,Gnonto,Wilfried,Gnonto,11,3,13,0.13769785,52
+703,Proctor,Sam,Proctor,2,1,13,0.13677807,40
+549,Neil,Dan,Neil,17,3,13,0.13613278,48
+592,Moore,Mikey,Moore,18,3,13,0.13604175,50
+168,Buonanotte,Facundo,Buonanotte,7,3,13,0.13489683,47
+245,Mudryk,Mykhailo,Mudryk,7,3,13,0.1330632,49
+333,Godo,Martial,Godo,10,3,13,0.13272305,45
+445,Amass,Harry,Amass,14,2,13,0.13234857,40
+334,Harris,Luke,Harris,10,3,13,0.13174643,45
+546,Aleksić,Milan,Aleksić,17,3,13,0.13126807,49
+548,Mundle,Romaine,Mundle,17,3,13,0.13121182,49
+484,Targett,Matt,Targett,15,2,13,0.13088259,40
+395,Morton,Tyler,Morton,12,3,13,0.12747428,45
+688,Wright,James,Wright,2,1,13,0.12734048,40
+550,Poveda,Ian,Poveda-Ocampo,17,3,13,0.12672119,48
+591,Gray,Archie,Gray,18,3,13,0.12595679,48
+755,Lacey,Shea,Lacey,14,3,13,0.124943085,45
+746,Morrison,Kieran,Morrison,12,3,13,0.12492169,45
+614,Ward-Prowse,James,Ward-Prowse,19,3,13,0.124397576,56
+711,Harriman-Annous,Andre,Harriman-Annous,1,3,13,0.12438113,45
+629,Bentley,Daniel,Bentley,20,1,13,0.1237338,40
+653,Hodge,Joe,Hodge,20,3,13,0.12314087,45
+460,Collyer,Toby,Collyer,14,3,13,0.12277742,45
+464,Moorhouse,Jack,Moorhouse,14,3,13,0.12268892,45
+394,McConnell,James,McConnell,12,3,13,0.12220878,44
+706,Justin,James,Justin,11,2,13,0.12218448,39
+495,Hayden,Isaac,Hayden,15,3,13,0.122093886,45
+498,White,Joe,White,15,3,13,0.122048825,45
+641,Pond,Alfie,Pond,20,2,13,0.12054091,39
+679,Hermansen,Mads,Hermansen,19,1,13,0.11994107,44
+689,Seung soo,Seung-Soo,Park,15,3,13,0.11934277,44
+687,Rees-Dottin,Remy,Rees-Dottin,4,3,13,0.11930092,44
+675,Gunn,Angus,Gunn,16,1,13,0.11916129,40
+752,Golambeckis,Airidas,Golambeckis,19,2,13,0.11902317,40
+248,Paez,Kendry,Páez Andrade,7,3,13,0.118757464,45
+651,Edozie,Tom,Edozie,20,3,13,0.11860669,44
+747,Mayers,Ezra,Mayers,19,2,13,0.11852612,40
+461,Fitzgerald,Jayce,Fitzgerald,14,3,13,0.1176985,44
+463,Kone,Sékou,Koné,14,3,13,0.11762662,44
+393,Bajcetic,Stefan,Bajčetić Maquieira,12,3,13,0.11721751,43
+496,Kuol,Garang,Kuol,15,3,13,0.11716612,44
+396,Nyoni,Trey,Nyoni,12,3,13,0.11700292,43
+323,Amissah,Samuel,Amissah,10,2,13,0.116231985,39
+523,Da Silva Moreira,Eric,da Silva Moreira,16,3,13,0.11566779,45
+524,Stamenic,Marko,Stamenić,16,3,13,0.11562319,45
+700,Dowman,Max,Dowman,1,3,13,0.1152284,43
+2,Arrizabalaga,Kepa,Arrizabalaga Revuelta,1,1,13,0.11502324,42
+704,Onyango,Tyler,Onyango,9,3,13,0.1146776,45
+555,Browne,Alan,Browne,17,3,13,0.1146047,45
+594,Min-hyeok,Yang,Min-hyeok,18,3,13,0.114598535,45
+556,Ekwah,Pierre,Ekwah Elimby,17,3,13,0.11458342,45
+754,George Hemmings,George,Hemmings,2,3,13,0.114491016,45
+751,Akhamrich,Yusuf,Akhamrich,18,3,13,0.1144815,45
+739,Mukasa,Divine,Mukasa,13,3,13,0.11446,45
+742,McAidoo,Ryan,McAidoo,13,3,13,0.11445295,45
+650,Chirewa,Tawanda,Chirewa,20,3,13,0.11421794,43
+462,J.Fletcher,Jack,Fletcher,14,3,13,0.11279076,43
+247,D.Essugo,Dário,Luís Essugo,7,3,13,0.11254423,43
+595,Olusesi,Callum,Olusesi,18,3,13,0.11162203,44
+690,Cardines,Rio,Cardines,8,3,13,0.11154027,44
+702,Burrowes,Bradley,Burrowes,2,3,13,0.11141717,44
+559,Triantis,Nectarios,Triantis,17,3,13,0.11103403,44
+558,Matete,Jay,Matete,17,3,13,0.11101769,44
+557,H.Jones,Harrison,Jones,17,3,13,0.11100138,44
+618,G.Rodriguez,Guido,Rodríguez,19,3,13,0.10903069,48
+483,Pivas,Miodrag,Pivaš,15,2,13,0.10873919,39
+482,Ashby,Harrison,Ashby,15,2,13,0.10873207,39
+481,A.Murphy,Alex,Murphy,15,2,13,0.10872493,39
+611,Casey,Kaelan,Casey,19,2,13,0.10763108,40
+356,Gruev,Ilia,Gruev,11,3,13,0.10394118,48
+355,Greenwood,Sam,Greenwood,11,3,13,0.10050691,49
+357,Ramazani,Largie,Ramazani,11,3,13,0.10038049,49
+616,Álvarez,Edson,Álvarez Velázquez,19,3,13,0.09806685,49
+617,Cornet,Maxwel,Cornet,19,3,13,0.09801267,49
+349,Schmidt,Isaac,Schmidt,11,2,13,0.09690709,40
+378,Nallo,Amara,Nallo,12,2,13,0.090627335,38
+380,Ramsay,Calvin,Ramsay,12,2,13,0.09054785,38
+446,Fredricson,Tyler,Fredricson,14,2,13,0.088894434,38
+448,Malacia,Tyrell,Malacia,14,2,13,0.08889056,38
+664,Lecomte,Benjamin,Lecomte,10,1,13,0.08730729,39
+620,Earthy,George,Earthy,19,3,13,0.083152376,45
+743,Emenalo,Landon,Emenalo,7,3,13,0.0823483,45
+359,Crew,Charlie,Crew,11,3,13,0.08089779,45
+360,Gelhardt,Joe,Gelhardt,11,3,13,0.080824465,45
+361,Gyabi,Darko,Gyabi,11,3,13,0.08075117,45
+622,Orford,Lewis,Orford,19,3,13,0.08009597,44
+345,Bornauw,Sebastiaan,Bornauw,11,2,13,0.078590386,39
+346,Byram,Sam,Byram,11,2,13,0.07847636,39
+33,M.Bizot,Marco,Bizot,2,1,13,0.0768808,43
+472,Odysseas,Odysseas,Vlachodimos,15,1,13,0.06188087,40
+433,Harrison,Elyh,Harrison,14,1,13,0.059760556,40
+630,King,Tom,King,9,1,13,0.05691634,39
+3,Hein,Karl,Hein,1,1,13,0.053875268,40
+4,Setford,Tommy,Setford,1,1,13,0.05386354,40
+315,Benda,Steven,Benda,10,1,13,0.053700775,40
+68,Dennis,Will,Dennis,4,1,13,0.05311437,40
+69,McKenna,Callan,McKenna,4,1,13,0.053102657,40
+70,Paulsen,Alex,Paulsen,4,1,13,0.053090975,40
+140,McGill,Tom,McGill,6,1,13,0.052519307,40
+141,Rushworth,Carl,Rushworth,6,1,13,0.052513734,40
+142,Scherpen,Kjell,Scherpen,6,1,13,0.05250816,40
+184,Green,Etienne,Green,3,1,13,0.05227433,40
+185,Hladký,Václav,Hladký,3,1,13,0.05226876,40
+504,Turner,Matt,Turner,16,1,13,0.045365915,40
+503,C.Miguel,Carlos Miguel,dos Santos Pereira,16,1,13,0.045169607,40
+567,Kinsky,Antonín,Kinský,18,1,13,0.039871708,39
+566,Austin,Brandon,Austin,18,1,13,0.03972125,39
+530,Nna Noukeu,Blondy,Nna Noukeu,17,1,13,0.034316495,39
+529,Moore,Simon,Moore,17,1,13,0.03419347,39
+471,Gillespie,Mark,Gillespie,15,1,13,0.03197749,39
+435,Mee,Dermot,Mee,14,1,13,0.030933604,39
+434,Heaton,Tom,Heaton,14,1,13,0.030892074,39
+369,Woodman,Freddie,Woodman,12,1,13,0.028806195,39
+368,Pécsi,Ármin,Pécsi,12,1,13,0.028774247,39
+401,Bettinelli,Marcus,Bettinelli,13,1,13,0.025641277,40
+339,Meslier,Illan,Meslier,11,1,13,0.013386667,43
+254,Benitez,Walter,Benítez,8,1,13,0.0074216425,40
+103,Cox,Matthew,Cox,5,1,13,-0.0004631728,40
+102,Balcombe,Ellery,Balcombe,5,1,13,-0.000483796,40
+601,Foderingham,Wes,Foderingham,19,1,13,-0.0009824932,40
+35,Marschall,Filip,Marschall,2,1,13,-0.0014213473,40
+34,Gauci,Joe,Gauci,2,1,13,-0.0014337748,40
+289,Tyrer,Harry,Tyrer,9,1,13,-0.0022010803,39
+602,Hegyi,Krisztián,Hegyi,19,1,13,-0.0043807775,39
+255,Matthews,Remi,Matthews,8,1,13,-0.0050442964,39
+105,Valdimarsson,Hákon Rafn,Valdimarsson,5,1,13,-0.010801673,39
+104,Eyestone,Julian,Eyestone,5,1,13,-0.010822251,39
+341,Darlow,Karl,Darlow,11,1,13,-0.011286274,40
+221,Jörgensen,Filip,Jörgensen,7,1,13,-0.01371859,43
+340,Cairns,Alex,Cairns,11,1,13,-0.014154181,40
+222,Penders,Mike,Penders,7,1,13,-0.018665299,40
+223,Slonina,Gabriel,Słonina,7,1,13,-0.020194009,39

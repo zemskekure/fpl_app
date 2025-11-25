@@ -1,0 +1,21 @@
+id,name,code,country,founded,national,logo,venue_name
+33,Manchester United,MUN,England,1878,False,https://media.api-sports.io/football/teams/33.png,Old Trafford
+34,Newcastle,NEW,England,1892,False,https://media.api-sports.io/football/teams/34.png,St. James' Park
+35,Bournemouth,BOU,England,1899,False,https://media.api-sports.io/football/teams/35.png,Vitality Stadium
+36,Fulham,FUL,England,1879,False,https://media.api-sports.io/football/teams/36.png,Craven Cottage
+39,Wolves,WOL,England,1877,False,https://media.api-sports.io/football/teams/39.png,Molineux Stadium
+40,Liverpool,LIV,England,1892,False,https://media.api-sports.io/football/teams/40.png,Anfield
+42,Arsenal,ARS,England,1886,False,https://media.api-sports.io/football/teams/42.png,Emirates Stadium
+44,Burnley,BUR,England,1882,False,https://media.api-sports.io/football/teams/44.png,Turf Moor
+45,Everton,EVE,England,1878,False,https://media.api-sports.io/football/teams/45.png,Hill Dickinson Stadium
+47,Tottenham,TOT,England,1882,False,https://media.api-sports.io/football/teams/47.png,Tottenham Hotspur Stadium
+48,West Ham,WES,England,1895,False,https://media.api-sports.io/football/teams/48.png,London Stadium
+49,Chelsea,CHE,England,1905,False,https://media.api-sports.io/football/teams/49.png,Stamford Bridge
+50,Manchester City,MAC,England,1880,False,https://media.api-sports.io/football/teams/50.png,Etihad Stadium
+51,Brighton,BRI,England,1901,False,https://media.api-sports.io/football/teams/51.png,American Express Stadium
+52,Crystal Palace,CRY,England,1861,False,https://media.api-sports.io/football/teams/52.png,Selhurst Park
+55,Brentford,BRE,England,1889,False,https://media.api-sports.io/football/teams/55.png,Gtech Community Stadium
+63,Leeds,LEE,England,1919,False,https://media.api-sports.io/football/teams/63.png,Elland Road
+65,Nottingham Forest,NOT,England,1865,False,https://media.api-sports.io/football/teams/65.png,The City Ground
+66,Aston Villa,AST,England,1874,False,https://media.api-sports.io/football/teams/66.png,Villa Park
+746,Sunderland,SUN,England,1879,False,https://media.api-sports.io/football/teams/746.png,Stadium of Light
