@@ -92,12 +92,31 @@ def load_data():
         st.error(f"Data Load Error: {e}")
         return None, None, None, None, None
 
+# Stat tooltips/explanations
+STAT_TOOLTIPS = {
+    'XP': 'Expected Points: Predicted FPL points for next gameweek based on ML model analyzing form, fixtures, and historical data',
+    'Form (Pts/G)': 'Average FPL points per game over the last 5 matches',
+    'Mins/G': 'Average minutes played per game over the last 5 matches',
+    'Selected By': 'Percentage of all FPL managers who currently own this player',
+    'ICT': 'ICT Index: Official FPL metric combining Influence (impact on match), Creativity (chance creation), and Threat (goal threat)',
+    'Saves/G': 'Average saves made per game over the last 5 matches',
+    'Clean Sheets': 'Total clean sheets (no goals conceded) in the last 5 matches',
+    'xGI/G': 'Expected Goal Involvements per game: Statistical measure of attacking contribution (xG + xA) over last 5 matches',
+    'GI': 'Goal Involvements: Total goals + assists in the last 5 matches',
+    'xG/G': 'Expected Goals per game: Statistical measure of goal-scoring chance quality over last 5 matches',
+    'Goals': 'Total goals scored in the last 5 matches',
+    'PROJECTED POINTS': 'Total expected points for your optimized Starting XI in the next gameweek',
+    'BANK REMAINING': 'Available budget after current squad selection (£0.1m = 1 unit)',
+    'TRANSFERS LEFT': 'Number of free transfers remaining this gameweek (additional transfers cost -4 points each)'
+}
+
 def get_player_metrics(pid, role, fpl_stats, api_stats):
     p_fpl = fpl_stats[fpl_stats['element'] == pid].sort_values('round', ascending=False).head(5)
     metrics = {}
     metrics['Form (Pts/G)'] = p_fpl['total_points'].mean()
     metrics['Mins/G'] = p_fpl['minutes'].mean()
-    metrics['Selected By'] = f"{p_fpl['selected'].iloc[0] / 10000:.1f}k" if not p_fpl.empty else "0"
+    # Convert to percentage: selected is in basis points (1% = 100), so divide by 100
+    metrics['Selected By'] = f"{p_fpl['selected'].iloc[0] / 100:.1f}%" if not p_fpl.empty else "0%"
     metrics['ICT'] = p_fpl['ict_index'].mean()
     if role == 1: # GK
         metrics['Saves/G'] = p_fpl['saves'].mean()
@@ -197,7 +216,10 @@ def optimize_lineup(squad_df):
     return squad_df, pd.DataFrame(), 0
 
 def set_transfer(out_id, in_row, cost_diff):
-    st.session_state.pending_transfer = {'out_id': out_id, 'in_row': in_row, 'cost_diff': cost_diff}
+    # Only allow transfer if we have transfers remaining
+    if st.session_state.transfers_remaining > 0:
+        st.session_state.pending_transfer = {'out_id': out_id, 'in_row': in_row, 'cost_diff': cost_diff}
+        st.session_state.transfers_remaining -= 1
 
 # --- UI COMPONENTS ---
 # DIALOG for Player Details
@@ -227,15 +249,34 @@ def show_player_card(player, fix_map, fpl_stats, api_stats, is_new=False):
     
     st.divider()
     
-    # Stats
+    # Stats with tooltips
     metrics, history = get_player_metrics(player['id'], player['element_type'], fpl_stats, api_stats)
     m_cols = st.columns(2)
     for i, (k, v) in enumerate(metrics.items()):
-        with m_cols[i % 2]: st.write(f"**{k}**: {v:.2f}" if isinstance(v, float) else f"**{k}**: {v}")
+        tooltip = STAT_TOOLTIPS.get(k, '')
+        value_str = f"{v:.2f}" if isinstance(v, float) else str(v)
+        with m_cols[i % 2]: 
+            st.write(f"**{k}**: {value_str}")
+            if tooltip:
+                st.caption(f"ℹ️ {tooltip}")
         
     st.divider()
-    st.caption("RECENT FORM")
-    st.dataframe(history[['round', 'total_points', 'minutes', 'goals_scored']].set_index('round'), use_container_width=True)
+    st.caption("RECENT FORM (Last 5 Matches)")
+    
+    # Position-specific columns for recent form
+    role = player['element_type']
+    if role == 1:  # GK
+        form_cols = ['round', 'total_points', 'minutes', 'saves', 'clean_sheets']
+    elif role == 2:  # DEF
+        form_cols = ['round', 'total_points', 'minutes', 'clean_sheets', 'expected_goals_conceded']
+    elif role == 3:  # MID
+        form_cols = ['round', 'total_points', 'minutes', 'goals_scored', 'assists']
+    else:  # FWD
+        form_cols = ['round', 'total_points', 'minutes', 'goals_scored', 'assists']
+    
+    # Filter to only existing columns
+    available_cols = [col for col in form_cols if col in history.columns]
+    st.dataframe(history[available_cols].set_index('round'), use_container_width=True)
 
 def render_pitch_grid(starters, bench, fix_map, fpl_stats, api_stats, prefix, highlight_id=None):
     # Wrap in pitch container
@@ -291,6 +332,7 @@ pred_df, boot, fix_map, fpl_stats, api_stats = load_data()
 if 'user_squad' not in st.session_state: st.session_state.user_squad = None
 if 'bank' not in st.session_state: st.session_state.bank = 0
 if 'pending_transfer' not in st.session_state: st.session_state.pending_transfer = None
+if 'transfers_remaining' not in st.session_state: st.session_state.transfers_remaining = 1
 
 tab_team, tab_wildcard = st.tabs(["MY TEAM", "AI WILDCARD"])
 
@@ -299,6 +341,7 @@ with tab_team:
     uid = c_in.text_input("MANAGER ID", placeholder="123456", label_visibility="collapsed")
     if c_btn.button("ANALYZE"):
         st.session_state.pending_transfer = None # Reset on new analyze
+        st.session_state.transfers_remaining = 1 # Reset transfers
         user_details = get_user_details(uid)
         curr_gw = next((x['id'] for x in boot['events'] if x['is_current']), 1)
         picks = requests.get(f"{config.FPL_BASE_URL}/entry/{uid}/event/{curr_gw}/picks/").json()
@@ -334,12 +377,15 @@ with tab_team:
         
         m1, m2, m3 = st.columns(3)
         
-        # Helper for styled metric box
+        # Helper for styled metric box with tooltip
         def metric_box(label, value, color_border, color_text="#000"):
+            tooltip = STAT_TOOLTIPS.get(label, '')
+            tooltip_html = f'<div style="color: #666; font-size: 0.7rem; margin-top: 8px; font-style: italic;">ℹ️ {tooltip}</div>' if tooltip else ''
             return f"""
             <div style="border: 3px solid {color_border}; background: #FFF; padding: 15px; text-align: center; height: 100%;">
                 <div style="color: #666; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">{label}</div>
                 <div style="color: {color_text}; font-size: 2.5rem; font-weight: 900; line-height: 1;">{value}</div>
+                {tooltip_html}
             </div>
             """
             
@@ -348,7 +394,7 @@ with tab_team:
         with m2:
             st.markdown(metric_box("BANK REMAINING", f"£{current_bank/10:.1f}m", "#059669", "#059669"), unsafe_allow_html=True)
         with m3:
-            st.markdown(metric_box("TRANSFERS LEFT", "1", "#2563EB", "#2563EB"), unsafe_allow_html=True) # Placeholder 1
+            st.markdown(metric_box("TRANSFERS LEFT", str(st.session_state.transfers_remaining), "#2563EB", "#2563EB"), unsafe_allow_html=True)
             
         st.write("") # Spacer
         
