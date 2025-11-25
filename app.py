@@ -75,11 +75,27 @@ st.markdown("""
         border-color: rgba(0,0,0,0.25) !important;
     }
     
-    /* Position-specific colors for player cards */
-    .player-gk { border-left-color: #FFD700 !important; background: linear-gradient(to right, rgba(255,215,0,0.08), rgba(255,255,255,0.92)) !important; }
-    .player-def { border-left-color: #4169E1 !important; background: linear-gradient(to right, rgba(65,105,225,0.08), rgba(255,255,255,0.92)) !important; }
-    .player-mid { border-left-color: #32CD32 !important; background: linear-gradient(to right, rgba(50,205,50,0.08), rgba(255,255,255,0.92)) !important; }
-    .player-fwd { border-left-color: #DC143C !important; background: linear-gradient(to right, rgba(220,20,60,0.08), rgba(255,255,255,0.92)) !important; }
+    /* Position-specific colors for player cards using :has() selector */
+    /* Hide the markers */
+    .pos-marker-gk, .pos-marker-def, .pos-marker-mid, .pos-marker-fwd { display: none; }
+    
+    /* Target the button following the marker */
+    div:has(.pos-marker-gk) + div.stButton button { 
+        border-left: 4px solid #FFD700 !important; 
+        background: linear-gradient(to right, rgba(255,215,0,0.15), rgba(255,255,255,0.95)) !important; 
+    }
+    div:has(.pos-marker-def) + div.stButton button { 
+        border-left: 4px solid #4169E1 !important; 
+        background: linear-gradient(to right, rgba(65,105,225,0.15), rgba(255,255,255,0.95)) !important; 
+    }
+    div:has(.pos-marker-mid) + div.stButton button { 
+        border-left: 4px solid #32CD32 !important; 
+        background: linear-gradient(to right, rgba(50,205,50,0.15), rgba(255,255,255,0.95)) !important; 
+    }
+    div:has(.pos-marker-fwd) + div.stButton button { 
+        border-left: 4px solid #DC143C !important; 
+        background: linear-gradient(to right, rgba(220,20,60,0.15), rgba(255,255,255,0.95)) !important; 
+    }
     
     /* Transfer suggestions - cleaner styling */
     .stButton button[kind="secondary"] {
@@ -402,8 +418,8 @@ def render_pitch_grid(starters, bench, fix_map, fpl_stats, api_stats, prefix, hi
                     is_new = (p.id == highlight_id)
                     
                     # Position class for color coding
-                    pos_class_map = {1: 'player-gk', 2: 'player-def', 3: 'player-mid', 4: 'player-fwd'}
-                    pos_class = pos_class_map.get(p.element_type, 'player-mid')
+                    pos_class_map = {1: 'pos-marker-gk', 2: 'pos-marker-def', 3: 'pos-marker-mid', 4: 'pos-marker-fwd'}
+                    pos_marker = pos_class_map.get(p.element_type, 'pos-marker-mid')
                     
                     # Button Label (Clean, no emojis)
                     label = f"{p.web_name}\n{p.xp:.1f}"
@@ -411,11 +427,11 @@ def render_pitch_grid(starters, bench, fix_map, fpl_stats, api_stats, prefix, hi
                     # Button Styling via Type
                     btn_type = "primary" if is_new else "secondary"
                     
-                    # Wrap in div with position class
-                    st.markdown(f'<div class="{pos_class}">', unsafe_allow_html=True)
+                    # Inject hidden marker for CSS targeting
+                    st.markdown(f'<div class="{pos_marker}"></div>', unsafe_allow_html=True)
+                    
                     if st.button(label, key=f"{prefix}_{r_idx}_{i}", type=btn_type, use_container_width=True):
                         show_player_card(p._asdict(), fix_map, fpl_stats, api_stats, boot, is_new)
-                    st.markdown('</div>', unsafe_allow_html=True)
             
             if r_idx < 3: 
                 st.write("")
@@ -429,17 +445,17 @@ def render_pitch_grid(starters, bench, fix_map, fpl_stats, api_stats, prefix, hi
                 is_new = (p.id == highlight_id)
                 
                 # Position class for color coding
-                pos_class_map = {1: 'player-gk', 2: 'player-def', 3: 'player-mid', 4: 'player-fwd'}
-                pos_class = pos_class_map.get(p.element_type, 'player-mid')
+                pos_class_map = {1: 'pos-marker-gk', 2: 'pos-marker-def', 3: 'pos-marker-mid', 4: 'pos-marker-fwd'}
+                pos_marker = pos_class_map.get(p.element_type, 'pos-marker-mid')
                 
                 label = f"{p.web_name}\n{p.xp:.1f}"
                 btn_type = "primary" if is_new else "secondary"
                 
-                # Wrap in div with position class
-                st.markdown(f'<div class="{pos_class}">', unsafe_allow_html=True)
+                # Inject hidden marker for CSS targeting
+                st.markdown(f'<div class="{pos_marker}"></div>', unsafe_allow_html=True)
+                
                 if st.button(label, key=f"{prefix}_bench_{i}", type=btn_type, use_container_width=True):
                     show_player_card(p._asdict(), fix_map, fpl_stats, api_stats, boot, is_new)
-                st.markdown('</div>', unsafe_allow_html=True)
 
 # --- MAIN ---
 st.markdown('<div class="title-box"><h2 style="font-weight: 400; color: #374151; margin: 0;">FPL Transfer Predictor</h2><p style="color: #6b7280; font-size: 0.9rem; margin-top: 8px;">AI-Powered Squad Analysis & Transfer Recommendations</p></div>', unsafe_allow_html=True)
