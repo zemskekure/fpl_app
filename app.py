@@ -249,16 +249,15 @@ def show_player_card(player, fix_map, fpl_stats, api_stats, is_new=False):
     
     st.divider()
     
-    # Stats with tooltips
+    # Stats with hover tooltips
     metrics, history = get_player_metrics(player['id'], player['element_type'], fpl_stats, api_stats)
     m_cols = st.columns(2)
     for i, (k, v) in enumerate(metrics.items()):
         tooltip = STAT_TOOLTIPS.get(k, '')
         value_str = f"{v:.2f}" if isinstance(v, float) else str(v)
-        with m_cols[i % 2]: 
-            st.write(f"**{k}**: {value_str}")
-            if tooltip:
-                st.caption(f"ℹ️ {tooltip}")
+        with m_cols[i % 2]:
+            # Use HTML with title attribute for hover tooltip
+            st.markdown(f'<span title="{tooltip}">**{k}**: {value_str}</span>', unsafe_allow_html=True)
         
     st.divider()
     st.caption("RECENT FORM (Last 5 Matches)")
@@ -377,15 +376,13 @@ with tab_team:
         
         m1, m2, m3 = st.columns(3)
         
-        # Helper for styled metric box with tooltip
+        # Helper for styled metric box with hover tooltip
         def metric_box(label, value, color_border, color_text="#000"):
             tooltip = STAT_TOOLTIPS.get(label, '')
-            tooltip_html = f'<div style="color: #666; font-size: 0.7rem; margin-top: 8px; font-style: italic;">ℹ️ {tooltip}</div>' if tooltip else ''
             return f"""
-            <div style="border: 3px solid {color_border}; background: #FFF; padding: 15px; text-align: center; height: 100%;">
+            <div style="border: 3px solid {color_border}; background: #FFF; padding: 15px; text-align: center; height: 100%; cursor: help;" title="{tooltip}">
                 <div style="color: #666; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">{label}</div>
                 <div style="color: {color_text}; font-size: 2.5rem; font-weight: 900; line-height: 1;">{value}</div>
-                {tooltip_html}
             </div>
             """
             
